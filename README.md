@@ -1,2 +1,2 @@
-# trabalhos-sistemas-ifsertaope-salgueiro
- Exercícios de programação e trabalhos realizados para o curso de Sistemas para Internet do IF Sertão-PE - Campus Salgueiro
+# Trabalhos - Sistemas para Internet - IF Sertão PE - Campus Salgueiro
+ Disponibilizo aqui os trabalhos feito por mim para o curso de Sistemas para Internet no Instituto Federal do Sertão Pernambucano - Campus Salgueiro.
