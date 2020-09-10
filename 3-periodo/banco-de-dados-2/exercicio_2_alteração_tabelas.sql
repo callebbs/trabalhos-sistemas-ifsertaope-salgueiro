@@ -1,15 +1,15 @@
 #atividade 2
-#Criar o banco ATIVIDADE2;
+#01 Criar o banco ATIVIDADE2;
 CREATE DATABASE atividade2;
 
-#Criar a tabela: "NOTA_FISCAL" - 
+#02 Criar a tabela: "NOTA_FISCAL" - 
 #Campos: numero VARCHAR(8), "data" DATE
 CREATE TABLE nota_fiscal(
 	numero VARCHAR(8),
 	data_nf DATE
 );
 
-#Com ALTER TABLE, defina a chave primária para a tabela NOTA_FISCAL
+#3 Com ALTER TABLE, defina a chave primária para a tabela NOTA_FISCAL
 #criada (campo numero).
 ALTER TABLE nota_fiscal ADD CONSTRAINT pk_nota_fiscal PRIMARY KEY(numero);
 
