@@ -44,4 +44,52 @@ CREATE TABLE itens_nota_fiscal(
 	total_item NUMERIC(8,2)
 );
 
+#10 Excluir o campo numero da tabela ITENS_NOTA_FISCAL.
+
+ALTER TABLE itens_nota_fiscal DROP COLUMN numero;
+
+#11 Exigir o preenchimento de todos os campos de ITENS_NOTA_FISCAL
+
+ALTER TABLE itens_nota_fiscal
+	MODIFY COLUMN codigo_produto INTEGER NOT NULL,
+	MODIFY COLUMN numero_nota_fiscal VARCHAR(8) NOT NULL,
+	MODIFY COLUMN quantidade NUMERIC(8,2) NOT NULL,
+	MODIFY COLUMN valor_item NUMERIC(8,2) NOT NULL,
+	MODIFY COLUMN total_item NUMERIC(8,2) NOT NULL;
+
+#12 Validar o campo total_item da tabela ITENS_NOTA_FISCAL (TOTAL_ITEM =
+# QUANTIDADE * VALOR_ITEM)
+CHECK NÃO ESTÁ FUNCIONANDO;
+
+#13 Criar a tabela PRODUTOS – Campos: "codigo" INTEGER NOT NULL, "nome"
+# VARCHAR(80) NOT NULL, "nome_fantasia" VARCHAR(20),
+# "estoque_minimo" NUMERIC(14,4), "data_cadastro" DATE NOT NULL,
+# CONSTRAINT "PRODUTOS_pkey" PRIMARY KEY("codigo").
+
+CREATE TABLE produtos(
+	codigo INTEGER NOT NULL,
+	nome VARCHAR(80) NOT NULL,
+	nome_fantasia VARCHAR(20),
+	estoque_minimo NUMERIC(14,4),
+	data_cadastro DATE NOT NULL,
+	CONSTRAINT pk_produtos PRIMARY KEY(codigo)
+);
+
+#14 Inserir novamente a coluna "numero" NUMERIC(12,0) na tabela
+#ITENS_NOTA_FISCAL, que deverá ser configurada como chave primária.
+ALTER TABLE itens_nota_fiscal ADD COLUMN numero BIGINT(12);
+
+ALTER TABLE itens_nota_fiscal ADD CONSTRAINT pk_itens_nota_fiscal PRIMARY KEY(numero);
+
+#15 Criar as chaves estrangeiras da tabela ITENS_NOTA_FISCAL
+#(codigo_produto) e (numero_nota_fiscal).
+
+ALTER TABLE itens_nota_fiscal ADD CONSTRAINT fk_itens_nota_fiscal_codigo FOREIGN KEY(codigo_produto) 
+	REFERENCES produtos(codigo);
+ALTER TABLE itens_nota_fiscal ADD CONSTRAINT fk_itens_nota_fiscal_numero FOREIGN KEY(numero_nota_fiscal) 
+	REFERENCES nota_fiscal(numero);
+
+
 DESC nota_fiscal;
+DESC itens_nota_fiscal;
+DESC produtos;
