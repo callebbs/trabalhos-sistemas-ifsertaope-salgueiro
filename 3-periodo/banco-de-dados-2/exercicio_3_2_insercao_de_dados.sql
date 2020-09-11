@@ -196,3 +196,18 @@ SELECT * FROM editoras WHERE endereco = 'Salvador';
 DELETE FROM editoras WHERE endereco = 'Salvador';
 
 SELECT * FROM editoras;
+
+#09 Altere os registro da tabela fucionários para deixar os campos função e salário nulos,
+# quando a função for Analista Contábil ou Auxiliar Administrativo.
+
+SELECT * FROM funcionarios;
+
+UPDATE funcionarios SET funcao = NULL, salario = NULL WHERE funcao = 'Analista Contábil';
+UPDATE funcionarios SET funcao = NULL, salario = NULL WHERE funcao = 'Auxiliar Administrativo';
+SELECT * FROM funcionarios WHERE funcao = 'Analista Contábil' OR funcao = 'Auxiliar Administrativo';
+
+#10 Exclua os registros das edituras Elsevier e Campus
+
+SELECT * FROM editoras WHERE nome = 'Elsevier' OR nome = 'Campus';
+
+DELETE FROM editoras WHERE nome = 'Elsevier' OR nome = 'Campus';
