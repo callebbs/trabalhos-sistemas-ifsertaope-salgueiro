@@ -160,4 +160,39 @@ SELECT * FROM livros WHERE numero = 87659908;
 UPDATE livros SET cpf_usuarioReservar = NULL, cpf_usuarioRetirar = 70964411900
 WHERE numero = 87659908;
 
-#05
+#05 Incluir dados na tabela Editora com as informações disponíveis no PDF.
+
+SELECT * FROM editoras;
+
+INSERT INTO editoras (codigo, nome, endereco, contato) VALUES
+	(9900545, 'Elsevier', 'São Paulo', NULL),
+	(4323458, 'Campus', 'Rio de Janeiro', 8009988),
+	(9876546, 'Erica', 'Salvador', NULL);
+
+#06 Altere os registro da tabela fucionários, para incluir a função Analista Contábil 
+# para os funcionários de cpf 20321295096 e 45403612087
+
+SELECT * FROM funcionarios WHERE cpf = 20321295096 OR cpf = 45403612087;
+
+UPDATE funcionarios SET funcao = 'Analista Contábil' WHERE CPF = 20321295096 OR cpf = 45403612087;
+
+#07 Altere os registros da tabela Funcionários para:
+# a) Se o cargo for Analista Contábil, incluir o salário 5.000,00.
+# b) Se o cargo estiver nulo, colocar a função Auxiliar administrativo e o Salário 2.000,00.
+
+UPDATE funcionarios SET salario = 5000 WHERE funcao = 'Analista Contábil';
+
+SELECT * FROM funcionarios WHERE funcao = 'Analista Contábil';
+SELECT * FROM funcionarios WHERE funcao IS NULL;
+
+SELECT * FROM funcionarios;
+
+UPDATE funcionarios SET funcao = 'Auxiliar Administrativo', salario = 2000 WHERE funcao IS NULL;
+
+#08 Exclua os campos da tabela Editoras cujo endereço seja Salvador
+
+SELECT * FROM editoras WHERE endereco = 'Salvador';
+
+DELETE FROM editoras WHERE endereco = 'Salvador';
+
+SELECT * FROM editoras;
