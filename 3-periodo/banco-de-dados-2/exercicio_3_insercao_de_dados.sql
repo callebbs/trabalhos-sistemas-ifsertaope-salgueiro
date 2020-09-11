@@ -61,3 +61,10 @@ CREATE TABLE livros_autores(
 
 ################################
 
+#Atividade 03
+#Inserção de dados
+
+INSERT INTO funcionarios
+VALUES (20321295096, 'João Alberto Smith', 'Itatiba', 22447865, 0.00, NULL);
+VALUES (23161197700, 'Ana Salles Azir', 'Salto', 22317865, 0.00, 'Recepcionista')
+
