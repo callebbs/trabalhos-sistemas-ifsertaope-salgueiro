@@ -125,3 +125,39 @@ INSERT INTO livros VALUES
 	(87659908, 'Tecnologias que Mud...', 'Tecnologia', 2, 2007, NULL, 2134000, NULL, 70964411900);
 	
 	
+##PARTE 02 DA ATIVIDADE 03
+
+#01 Atualize o funcionário de cpf 32361298734 para a função Auxiliar e salário 1.800,00;
+
+SELECT * FROM funcionarios WHERE cpf = 32361298734;
+
+UPDATE funcionarios SET salario = 1800, funcao = 'Auxiliar'
+WHERE cpf = 32361298734;
+
+#02 Exclua o usuario de cpf 45399109881;
+
+SELECT * FROM funcionarios WHERE cpf = 45399109881;
+select * FROM funcionarios;
+
+INSERT INTO funcionarios (cpf, nome, endereco, telefone) VALUES
+(45399109881, 'Teste', 'Salgueiro', 38711518);
+
+DELETE FROM funcionarios WHERE cpf = 45399109881;
+
+#03 Exclua o registro da tabela livros_autores, cujo número do livro 
+# seja 32176500 e o código do autor seja 90984133;
+
+SELECT * FROM livros_autores WHERE numero_livro = 32176500 AND codigo_autor = 90984133;
+
+DELETE FROM livros_autores WHERE numero_livro = 32176500 AND codigo_autor = 90984133;
+
+#04 Atualize a tabela livros, alterando o CPF_usuarioReservar para nulo 
+# e o CPF_usuarioRetirar para 70964411900,
+# isso para o registro cujo numero seja 87659908;
+
+SELECT * FROM livros WHERE numero = 87659908;
+
+UPDATE livros SET cpf_usuarioReservar = NULL, cpf_usuarioRetirar = 70964411900
+WHERE numero = 87659908;
+
+#05
