@@ -69,4 +69,30 @@ SELECT endereco, MIN(salario) FROM funcionarios;
 
 #14 Listar a quantidade de funcionários que retiraram livros
 DESC livros;
-SELECT cpf_usuarioRetirar FROM livros GROUP BY funcionarios;
+SELECT cpf_funcionario FROM livros WHERE cpf_funcionario IS NOT NULL;
+
+#15 Listar os títulos e gêneros dos livros que não estão reservados
+SELECT * FROM livros;
+
+SELECT titulo, genero FROM livros WHERE cpf_usuarioReservar IS NULL;
+
+#16 Listar os funcionários que começam o nome com Ana
+SELECT nome FROM funcionarios WHERE nome LIKE 'A%';
+
+#17 Listar os funcionários que possuem "Ana" em qualquer parte do nome.
+SELECT nome FROM funcionarios WHERE nome LIKE '%ana%';
+
+#18 Listar os funcionários quais seus nmes terminem com "s"
+SELECT nome FROM funcionarios WHERE nome LIKE '%s';
+
+#19 Listar os livros que possuem 1, 5, 10 ou 20 edições;
+SELECT * FROM livros;
+SELECT titulo, edicao FROM livros WHERE edicao = 1 OR edicao = 5 OR edicao = 10 OR edicao = 20;
+
+#20 Apresente os funcionários que não possua valor nulo na função;
+SELECT * FROM funcionarios;
+
+SELECT nome, funcao FROM funcionarios WHERE funcao IS NOT NULL;
+
+#21 Selecionar os funcionários que o salário não estejam entre 1.000 e 1.500;
+SELECT nome, salario FROM funcionarios WHERE salario >= 1.000 AND salario <= 1.500;
