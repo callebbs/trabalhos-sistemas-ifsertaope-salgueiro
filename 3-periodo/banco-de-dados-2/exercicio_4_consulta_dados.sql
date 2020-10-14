@@ -36,3 +36,37 @@ SELECT nome,
 		 (salario + 615) AS "Salario com Adicional de 615"
 FROM funcionarios;
 
+#9 Listar a nacionalidade dos autores.
+
+SELECT * FROM autores;
+
+SELECT nacionalidade FROM autores;
+
+#10 Selecionar a média dos salaários dos funcionários de acordo com o endereço.
+#Apesentar somente os grupos com a média maior que 1.000.
+
+SELECT * FROM funcionarios;
+
+SELECT endereco, AVG(salario) FROM funcionarios
+GROUP BY endereco HAVING AVG(salario) > 1.000;
+
+#11 Listar o livro publicado mais recentemente
+
+SELECT * FROM livros;
+
+SELECT titulo, ano_publicacao FROM livros
+ORDER BY ano_publicacao;
+
+#12 Apresentar a soma dos salários dos funcionários de Campinas.
+
+SELECT * FROM funcionarios;
+SELECT endereco, salario, SUM(salario) FROM funcionarios WHERE endereco = "Campinas";
+
+#13 Selecionar os menores salários e suas respectivas cidades
+
+SELECT * FROM funcionarios;
+SELECT endereco, MIN(salario) FROM funcionarios;
+
+#14 Listar a quantidade de funcionários que retiraram livros
+DESC livros;
+SELECT cpf_usuarioRetirar FROM livros GROUP BY funcionarios;
