@@ -27,4 +27,12 @@ SELECT nome,
 		 (salario * 1.3) AS "Novo salário" 
 FROM funcionarios;
 
-#8
+#8 Mostrar os funcionários com seus salários acrescidos de R$615,00
+
+SELECT * FROM funcionarios;
+
+SELECT nome,
+		 salario,
+		 (salario + 615) AS "Salario com Adicional de 615"
+FROM funcionarios;
+
