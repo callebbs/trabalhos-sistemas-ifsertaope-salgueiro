@@ -1,4 +1,7 @@
 /*
+
+QUESTÃO 01
+
 De acordo com o esquema:
 Funcionarios(idFuncionario, nome, sobrenome, cargo, idade, tempoServico, salario)
 
@@ -102,3 +105,64 @@ SELECT nome Nome, sobrenome Sobrenome, idade Idade
 	FROM funcionarios
 	ORDER BY idade DESC
 	LIMIT 4;
+	
+/*
+QUESTÃO 02
+
+Considerando a tabela, Elabore as seguintes consultas:
+
+a) Selecione os nomes dos cursos, créditos e valores e mostre com os respectivos nomes:
+Nome_Curso, Créditos e Preços.
+b) Mostre os créditos dos cursos sem valores repetidos.
+c) Selecione os códigos e nomes de cursos com valores entre 300 e 400.
+d) Selecione os cursos que tenham Software no seu nome.
+e) Selecione o nome e valor dos cursos com valores abaixo de 300 (inclusive).
+f) Selecione nome e créditos dos cursos e acrescente 6 créditos.
+g) Selecione os cursos de 6 créditos e valores acima de 200.
+
+*/ 
+
+#criando tabelas
+CREATE TABLE curso(
+	codigo VARCHAR(4) NOT NULL PRIMARY KEY,
+	nome VARCHAR(40) NOT NULL,
+	creditos INT(4) NOT NULL,
+	valor DECIMAL(5,2) NOT NULL
+);
+
+#inserindo dados
+INSERT INTO curso 
+	VALUES
+	('10-A', 'Sistemas Operacionais', 6, 200),
+	('20-B', 'Redes', 12, 350),
+	('10-C', 'Java', 10, 200),
+	('30-A', 'Banco de Dados', 10, 300),
+	('40-B', 'Computação Gráfica', 6, 250),
+	('20-C', 'Orientação a Objetos', 6, 200),
+	('11-A', 'Inteligência Artificial', 12, 300),
+	('35-C', 'Projeto de Software', 8, 350),
+	('56-E', 'Qualidade de Software', 12, 400);
+	
+#a) Selecione os nomes dos cursos, créditos e valores e mostre com os respectivos nomes:
+#   Nome_Curso, Créditos e Preços.
+
+SELECT nome Nome_Curso, creditos Créditos, valor Preço FROM curso;
+
+#b) Mostre os créditos dos cursos sem valores repetidos.
+
+SELECT distinct creditos Créditos FROM curso;
+
+#c) Selecione os códigos e nomes de cursos com valores entre 300 e 400.
+SELECT codigo, nome, valor FROM curso WHERE valor BETWEEN 300 AND 400;
+
+#d) Selecione os cursos que tenham Software no seu nome.
+SELECT nome FROM curso WHERE nome LIKE '%Software%';
+
+#e) Selecione o nome e valor dos cursos com valores abaixo de 300 (inclusive).
+SELECT nome 'Nome do Curso', valor Valor FROM curso WHERE valor <= 300 ORDER BY valor DESC;
+
+#f) Selecione nome e créditos dos cursos e acrescente 6 créditos.
+SELECT nome Nome, creditos 'Créditos', (creditos+6) AS 'Novos créditos' FROM curso;
+
+#g) Selecione os cursos de 6 créditos e valores acima de 200.
+SELECT nome, creditos, valor FROM curso WHERE creditos = 6 AND valor > 200;
