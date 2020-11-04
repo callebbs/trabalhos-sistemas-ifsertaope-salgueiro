@@ -373,3 +373,59 @@ SELECT * FROM itensvenda;
 
 SELECT MAX(v.total) 'Maior venda do mês', v.`DATA` as Data
 	FROM venda v WHERE MONTH(v.`DATA`) = 08;
+	
+#-----------------------------------------------------------------------------
+
+
+/*
+
+De acordo com o esquema abaixo e utilizando os comandos da linguagem SQL:
+Cliente(IdCliente, NomeCliente, Endereco, Cidade, Estado, Obs)
+Transportadora(IdTransportadora, NomeTransportadora, Endereco, Ciade, Estado, Atividade)
+Produto(IdProduto, NomeProduto, Descricao, Preco, Quantidade)
+Pedido(IdPedido, IdCliente, IdTransportadora, Data, Obs)
+OrdemPedido(IdOrdemPedido, IdProduto, IdPedido, Quantidade)
+i. Nome dos clientes que fizeram pedidos (não incluir nomes repetidos).
+ii. Nome dos produtos que foram pedidos (não incluir nomes repetidos).
+iii. Nome das transportadoras que foram utilizadas para a venda dos produtos 
+(não incluir nomes
+repetidos).
+iv. Quantidade máxima de produtos requisitada.
+v. Quantidade mínima de produtos requisitada.
+vi. Quantidade de produtos requisitados.vii. Quantidade mínima de produto em estoque.
+viii. Média da quantidade dos produtos pedidos.
+ix. Nome dos produtos comprados pelos clientes do estado de São Paulo.
+x. Nome das transportadoras requisitadas pelos clientes da cidade de Campinas.
+xi. Quantidade de pedidos dos clientes de São Paulo.
+xii. Se aumentarmos o preço dos produtos em 15%, qual seria o nome 
+e o novo preço dos produtos?
+xiii. Nome dos produtos comprados e nome das transportadoreas requisitadas 
+pelos clientes do estado de
+São Paulo.
+xiv. Nome dos produtos transportados pela TRANSCAR.
+xv. Nome dos clientes que compraram o produto SPMW34
+
+*/
+
+
+CREATE DATABASE bd2_atividade5_qst4;
+
+CREATE TABLE Cliente(
+	idCliente INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	NomeCliente VARCHAR(30) NOT NULL,
+	Endereco VARCHAR(30) NOT NULL,
+	Cidade VARCHAR(20) NOT NULL,
+	Estado VARCHAR(2) NOT NULL,
+	Obs VARCHAR(50)
+);
+
+CREATE TABLE Transportadora(
+	idTransportadora INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	NomeTransportadora VARCHAR(30) NOT NULL,
+	Endereco VARCHAR(30),
+	Cidade VARCHAR(20) NOT NULL,
+	Estado VARCHAR(2) NOT NULL,
+	Atividade VARCHAR(30)
+	
+	FALTA CONSTRAINT fk
+);
