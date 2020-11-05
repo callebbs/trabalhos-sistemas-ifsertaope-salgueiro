@@ -426,6 +426,25 @@ CREATE TABLE Transportadora(
 	Cidade VARCHAR(20) NOT NULL,
 	Estado VARCHAR(2) NOT NULL,
 	Atividade VARCHAR(30)
-	
-	FALTA CONSTRAINT fk
 );
+
+CREATE TABLE Produto(
+	idProduto INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	NomeProduto VARCHAR(30) NOT NULL,
+	Descricao VARCHAR(50),
+	Preco DECIMAL (6,2) NOT NULL,
+	Quantidade INT(4) NOT NULL
+);
+
+CREATE TABLE Pedido(
+	IdPedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	idCliente INT(3) NOT NULL,
+	idTransportadora INT(3) NOT NULL,
+	DataPedido DATE NOT NULL,
+	Obs VARCHAR(50),
+	CONSTRAINT fk_pedido_cliente FOREIGN KEY(idCliente) REFERENCES Cliente(idCliente),
+	CONSTRAINT fk_pedido_transport FOREIGN KEY(idTransportadora) REFERENCES Transportadora(idTransportadora)	
+);
+
+
+
