@@ -407,9 +407,11 @@ xv. Nome dos clientes que compraram o produto SPMW34
 
 */
 
-
+#criando o banco
 CREATE DATABASE bd2_atividade5_qst4;
 
+
+#criando tabelas
 CREATE TABLE Cliente(
 	idCliente INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	NomeCliente VARCHAR(30) NOT NULL,
@@ -437,7 +439,7 @@ CREATE TABLE Produto(
 );
 
 CREATE TABLE Pedido(
-	IdPedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	idPedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	idCliente INT(3) NOT NULL,
 	idTransportadora INT(3) NOT NULL,
 	DataPedido DATE NOT NULL,
@@ -446,5 +448,52 @@ CREATE TABLE Pedido(
 	CONSTRAINT fk_pedido_transport FOREIGN KEY(idTransportadora) REFERENCES Transportadora(idTransportadora)	
 );
 
+CREATE TABLE OrdemPedido(
+	idOrdemPedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	idProduto INT(3) NOT NULL,
+	idPedido INT(3) NOT NULL,
+	Quantidade INT(3) NOT NULL,
+	CONSTRAINT fk_ordempedido_produto FOREIGN KEY(idProduto) REFERENCES produto(idProduto),
+	CONSTRAINT fk_ordempedido_pedido FOREIGN KEY(idPedido) REFERENCES Pedido(idPedido) 
+);
 
 
+#inserindo dados
+
+INSERT INTO cliente (NomeCliente, Endereco, Cidade, Estado)
+	VALUES 
+	('Carlos Alves', 'Rua 50', 'Salgueiro', 'PE'),
+	('Marcos Silva', 'Avenida do Comércio', 'Recife', 'PE'),
+	('Andreza Maria', 'Rua 21', 'Garanhuns', 'PE'),
+	('Jeferson Luiz', 'Rua 04', 'Serrita', 'PE'),
+	('Joana Bezerra', 'Rua das Flores', 'Maceió', 'AL'),
+	('Flávia Lucas', 'Rua Deósio Lucas', 'Salgueiro', 'PE'),
+	('Mazarelo Neto', 'Avenida Agamenon', 'Salgueiro', 'PE'),
+	('Isabelle Eufrásio', 'Copo de Cristal', 'Salgueiro', 'PE');
+	
+SELECT * FROM transportadora;
+
+INSERT INTO transportadora (NomeTransportadora, Cidade, Estado)
+	VALUES
+	('Ajato Transportes', 'Salgueiro', 'PE'),
+	('VoaRápido Transportes', 'Recife', 'PE'),
+	('Transporte Seguro', 'Recife', 'PE'),
+	('Rapidão Cometa', 'Recife', 'PE');
+	
+SELECT * FROM produto;
+
+INSERT INTO produto (NomeProduto, Descricao, Preco, Quantidade)
+	VALUES
+	('Processador Intel i3', 'Processador para computador', 900, 5),
+	('Processador Intel i5', 'Processador para computador', 1300, 5),
+	('Processador Intel i7', 'Processador para computador', 1700, 2),
+	('Placa mãe Gigabyte', 'Placa mãe para computador', 800, 5),
+	('Placa mãe Asus', 'Placa mãe para computador', 900, 5),
+	('Placa mãe Asrock', 'Placa mãe para computador', 700, 3),
+	('Gabinete CoolerMaster', 'Gabinete para computador', 835, 2),
+	('Monitor Asus 24 Polegadas', 'Monitor para computador', 1500, 7),
+	('Monitor Dell 21 Polegadas', 'Monitor para computador', 1200, 1),
+	('Teclado Mecânico Corsair', 'Teclado mecânico', 500, 2),
+	('Teclado Mecânico Redragon', 'Teclaco mecânico', 200, 3),
+	('Mouse Logitech RGB', 'Mouse para computador', 300, 1),
+	('Notebook Asus i5 1TB 8GB RAM', 'Notebook', 2400, 1);
