@@ -379,6 +379,8 @@ SELECT MAX(v.total) 'Maior venda do mês', v.`DATA` as Data
 
 /*
 
+QUESTÃO 04
+
 De acordo com o esquema abaixo e utilizando os comandos da linguagem SQL:
 Cliente(IdCliente, NomeCliente, Endereco, Cidade, Estado, Obs)
 Transportadora(IdTransportadora, NomeTransportadora, Endereco, Ciade, Estado, Atividade)
@@ -410,90 +412,229 @@ xv. Nome dos clientes que compraram o produto SPMW34
 #criando o banco
 CREATE DATABASE bd2_atividade5_qst4;
 
-
 #criando tabelas
-CREATE TABLE Cliente(
-	idCliente INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NomeCliente VARCHAR(30) NOT NULL,
-	Endereco VARCHAR(30) NOT NULL,
-	Cidade VARCHAR(20) NOT NULL,
-	Estado VARCHAR(2) NOT NULL,
-	Obs VARCHAR(50)
+CREATE TABLE cliente(
+idCliente INT PRIMARY KEY AUTO_INCREMENT,
+nomeCliente VARCHAR(30) NOT NULL,
+endereco VARCHAR(50),
+cidade VARCHAR(30),
+estado CHAR(2),
+observacao VARCHAR(50)
 );
 
-CREATE TABLE Transportadora(
-	idTransportadora INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NomeTransportadora VARCHAR(30) NOT NULL,
-	Endereco VARCHAR(30),
-	Cidade VARCHAR(20) NOT NULL,
-	Estado VARCHAR(2) NOT NULL,
-	Atividade VARCHAR(30)
+CREATE TABLE transportadora(
+idTransportadora INT PRIMARY KEY AUTO_INCREMENT,
+nomeTransportadora VARCHAR(30) NOT NULL,
+endereco VARCHAR(50),
+cidade VARCHAR(30),
+estado CHAR(2),
+atividade VARCHAR(40)
 );
 
-CREATE TABLE Produto(
-	idProduto INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	NomeProduto VARCHAR(30) NOT NULL,
-	Descricao VARCHAR(50),
-	Preco DECIMAL (6,2) NOT NULL,
-	Quantidade INT(4) NOT NULL
+CREATE TABLE produto(
+idProduto INT PRIMARY KEY AUTO_INCREMENT,
+nomeProduto  VARCHAR(30) NOT NULL,
+descricao VARCHAR(50),
+preco DECIMAL(10,2),
+quantidade DECIMAL(10,2)
 );
 
-CREATE TABLE Pedido(
-	idPedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	idCliente INT(3) NOT NULL,
-	idTransportadora INT(3) NOT NULL,
-	DataPedido DATE NOT NULL,
-	Obs VARCHAR(50),
-	CONSTRAINT fk_pedido_cliente FOREIGN KEY(idCliente) REFERENCES Cliente(idCliente),
-	CONSTRAINT fk_pedido_transport FOREIGN KEY(idTransportadora) REFERENCES Transportadora(idTransportadora)	
+CREATE TABLE pedido(
+idPedido INT PRIMARY KEY AUTO_INCREMENT,
+idCliente INT,
+idTransportadora INT,
+DATA DATE,
+observacao VARCHAR(40),
+CONSTRAINT fk_ped_cli FOREIGN KEY (idCliente) REFERENCES cliente(idCliente),
+CONSTRAINT fk_ped_tra FOREIGN KEY (idTransportadora) REFERENCES transportadora(idTransportadora)
 );
 
-CREATE TABLE OrdemPedido(
-	idOrdemPedido INT(3) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	idProduto INT(3) NOT NULL,
-	idPedido INT(3) NOT NULL,
-	Quantidade INT(3) NOT NULL,
-	CONSTRAINT fk_ordempedido_produto FOREIGN KEY(idProduto) REFERENCES produto(idProduto),
-	CONSTRAINT fk_ordempedido_pedido FOREIGN KEY(idPedido) REFERENCES Pedido(idPedido) 
+CREATE TABLE ordemPedido(
+idOrdemPedido INT PRIMARY KEY AUTO_INCREMENT,
+idProduto INT,
+idPedido INT,
+quantidade DECIMAL(10,2),
+CONSTRAINT fk_ope_pro FOREIGN KEY (idProduto) REFERENCES produto(idProduto),
+CONSTRAINT fk_ope_ped FOREIGN KEY (idPedido) REFERENCES pedido(idPedido)
 );
-
 
 #inserindo dados
 
-INSERT INTO cliente (NomeCliente, Endereco, Cidade, Estado)
-	VALUES 
-	('Carlos Alves', 'Rua 50', 'Salgueiro', 'PE'),
-	('Marcos Silva', 'Avenida do Comércio', 'Recife', 'PE'),
-	('Andreza Maria', 'Rua 21', 'Garanhuns', 'PE'),
-	('Jeferson Luiz', 'Rua 04', 'Serrita', 'PE'),
-	('Joana Bezerra', 'Rua das Flores', 'Maceió', 'AL'),
-	('Flávia Lucas', 'Rua Deósio Lucas', 'Salgueiro', 'PE'),
-	('Mazarelo Neto', 'Avenida Agamenon', 'Salgueiro', 'PE'),
-	('Isabelle Eufrásio', 'Copo de Cristal', 'Salgueiro', 'PE');
-	
-SELECT * FROM transportadora;
+INSERT INTO cliente 
+(idCliente,nomeCliente,endereco,cidade,estado,observacao)
+VALUES
+(NULL, 'Lucia Maria', 'Rua x n 10', 'Campinas', 'SP', NULL),
+(NULL, 'Luis Carlos', null, 'Salvador', 'BA', NULL),
+(NULL, 'João da Silva', 'Avenida João de Barro n 541', 'Campinas', 'SP', NULL),
+(NULL, 'Ana Maria dos Santos', NULL, 'São Paulo', 'SP', NULL),
+(NULL, 'Maria Souza do Nascimento', NULL, 'Salgueiro', 'PE', NULL),
+(NULL, 'José da Rocha', NULL, 'Crato', 'CE', NULL);
 
-INSERT INTO transportadora (NomeTransportadora, Cidade, Estado)
-	VALUES
-	('Ajato Transportes', 'Salgueiro', 'PE'),
-	('VoaRápido Transportes', 'Recife', 'PE'),
-	('Transporte Seguro', 'Recife', 'PE'),
-	('Rapidão Cometa', 'Recife', 'PE');
+INSERT INTO transportadora
+(idTransportadora,nomeTransportadora,endereco,cidade,estado,atividade)
+VALUES
+(NULL, 'TRANSCAR', 'Avenida Joaquim Nabuco, 100', 'São Paulo', 'SP', 'Transporte de cargas em geral'),
+(NULL, 'TRANSPORTA MAIS', NULL, 'Campinas', 'SP', 'Transporte de cargas perecíveis'),
+(NULL, 'CORREIOS', NULL, NULL, NULL, 'Transporte de cargas em geral'),
+(NULL, 'TRANSPORTAR', 'RUA DA GRAÇA, 454', 'Salgueiro', 'PE', NULL);
+
+
+INSERT INTO produto
+(idProduto, nomeProduto,descricao,preco,quantidade)
+VALUES
+(NULL, 'Microcomputador Intel core i7', NULL, 3345.44, 7),
+(NULL, 'Notebook Intel core i5', NULL, 3548.55, 5),
+(NULL, 'Mouse óptico sem fio', NULL, 78.54, 24),
+(NULL, 'Teclado óptico sem fio', NULL, 112.74, 12),
+(NULL, 'Cabo hdmi 3m', NULL, 100.40, 18);
+
+INSERT INTO pedido
+(idPedido,idCliente,idTransportadora,DATA,observacao)
+VALUES 
+(NULL, 3, 1, '2018-06-24', NULL),
+(NULL, 1, 4, '2018-10-14', NULL),
+(NULL, 3, 2, '2019-02-18', NULL),
+(NULL, 2, 4, '2019-06-01', NULL),
+(NULL, 5, 1, '2019-10-09', NULL),
+(NULL, 2, 1, '2020-06-22', NULL),
+(NULL, 3, 1, '2020-08-11', NULL);
+
+INSERT INTO ordemPedido
+(idOrdemPedido,idProduto,idPedido,quantidade)
+VALUES
+(NULL, 1, 3, 1),
+(NULL, 3, 3, 1),
+(NULL, 1, 1, 1),
+(NULL, 2, 2, 1),
+(NULL, 3, 2, 2),
+(NULL, 4, 2, 2),
+(NULL, 2, 4, 1),
+(NULL, 3, 5, 2);
+
+#respondendo as questões
+
+#i. Nome dos clientes que fizeram pedidos (não incluir nomes repetidos).
+
+SELECT * FROM cliente;
+SELECT * FROM pedido;
+
+SELECT distinct c.nomeCliente AS 'Nome do Cliente'
+	FROM cliente c 
+	INNER JOIN pedido p ON c.idCliente = p.idCliente;
+
+#ii. Nome dos produtos que foram pedidos (não incluir nomes repetidos).
+
+SELECT * FROM produto;
+SELECT * FROM ordempedido;
+
+SELECT DISTINCT pr.idProduto AS 'ID Produto', pr.nomeProduto AS 'Produto'
+	FROM produto pr
+	INNER JOIN ordempedido o ON pr.idProduto = o.idProduto
+	GROUP BY pr.nomeProduto;
 	
+#iii. Nome das transportadoras que foram utilizadas para a venda dos produtos 
+#(não incluir nomes repetidos).
+
+SELECT * FROM transportadora;
+SELECT * FROM pedido;
+
+SELECT DISTINCT p.idTransportadora 'ID', nomeTransportadora AS 'Transportadora'
+	FROM transportadora p
+	INNER JOIN pedido pe ON p.idTransportadora = pe.idTransportadora
+	GROUP BY p.idTransportadora;
+	
+#iv. Quantidade máxima de produtos requisitada.
+
+SELECT * FROM ordempedido;
+
+SELECT MAX(quantidade) AS 'Quantidade máxima pedida' FROM ordempedido o;
+
+
+#v. Quantidade mínima de produtos requisitada.
+
+SELECT * FROM ordempedido;
+
+SELECT MIN(quantidade) AS 'Quantidade mínima pedida' FROM ordempedido;
+
+#vi. Quantidade de produtos requisitados.
+SELECT * FROM ordempedido;
+
+SELECT SUM(quantidade) FROM ordempedido;
+
+#vii. Quantidade mínima de produto em estoque.
+
 SELECT * FROM produto;
 
-INSERT INTO produto (NomeProduto, Descricao, Preco, Quantidade)
-	VALUES
-	('Processador Intel i3', 'Processador para computador', 900, 5),
-	('Processador Intel i5', 'Processador para computador', 1300, 5),
-	('Processador Intel i7', 'Processador para computador', 1700, 2),
-	('Placa mãe Gigabyte', 'Placa mãe para computador', 800, 5),
-	('Placa mãe Asus', 'Placa mãe para computador', 900, 5),
-	('Placa mãe Asrock', 'Placa mãe para computador', 700, 3),
-	('Gabinete CoolerMaster', 'Gabinete para computador', 835, 2),
-	('Monitor Asus 24 Polegadas', 'Monitor para computador', 1500, 7),
-	('Monitor Dell 21 Polegadas', 'Monitor para computador', 1200, 1),
-	('Teclado Mecânico Corsair', 'Teclado mecânico', 500, 2),
-	('Teclado Mecânico Redragon', 'Teclaco mecânico', 200, 3),
-	('Mouse Logitech RGB', 'Mouse para computador', 300, 1),
-	('Notebook Asus i5 1TB 8GB RAM', 'Notebook', 2400, 1);
+SELECT MIN(quantidade) 'Quantidade mínima em estoque' FROM produto;
+
+#viii. Média da quantidade dos produtos pedidos.
+SELECT * FROM ordempedido;
+
+SELECT AVG(quantidade) 'Quantidade média de produtos pedidos' FROM ordempedido;
+
+#ix. Nome dos produtos comprados pelos clientes do estado de São Paulo.
+
+SELECT * FROM cliente;
+SELECT * FROM pedido;
+SELECT * FROM produto;
+SELECT * FROM ordempedido;
+
+SELECT p.idPedido 'ID do Pedido', o.quantidade 'Quantidade', pro.nomeProduto 'Nome do Produto', c.estado AS 'Estado a ser enviado'
+	FROM cliente c
+	INNER JOIN pedido p ON c.idCliente = p.idCliente
+	INNER JOIN ordempedido o ON o.idPedido = p.idPedido
+	INNER JOIN produto pro ON pro.idProduto = o.idProduto
+	WHERE c.estado = 'SP'
+	GROUP BY pro.nomeProduto
+	ORDER BY p.idPedido ASC;
+
+#x. Nome das transportadoras requisitadas pelos clientes da cidade de Campinas.
+
+SELECT * FROM cliente;
+SELECT * FROM transportadora;
+SELECT * FROM pedido;
+SELECT * FROM ordempedido;
+
+SELECT p.idPedido 'ID do Pedido', t.nomeTransportadora AS 'Nome da Transportadora'
+	FROM cliente c
+	INNER JOIN pedido p ON c.idCliente = p.idCliente
+	INNER JOIN ordempedido o ON o.idPedido = p.idPedido
+	INNER JOIN transportadora t ON t.idTransportadora = p.idTransportadora
+	WHERE c.cidade = 'Campinas'
+	GROUP BY t.nomeTransportadora;
+
+#xi. Quantidade de pedidos dos clientes de São Paulo.
+
+SELECT * FROM cliente;
+SELECT * FROM pedido;
+SELECT * FROM produto;
+SELECT * FROM ordempedido;
+
+SELECT COUNT(p.idPedido) 'Quantidade de Itens pedidos para São Paulo'
+	FROM pedido p
+	INNER JOIN cliente c ON p.idCliente = c.idCliente
+	WHERE c.estado = 'SP';
+	
+#xii. Se aumentarmos o preço dos produtos em 15%, qual seria o nome 
+# e o novo preço dos produtos?
+
+SELECT * FROM produto;
+
+SELECT nomeProduto 'Nome do Produto', preco 'Preço', preco * 1.15 AS 'Novo preço' FROM produto;
+
+#xiii. Nome dos produtos comprados e nome das transportadoreas requisitadas 
+# pelos clientes do estado de São Paulo.
+
+SELECT pro.nomeProduto AS 'Nome do Produto', t.nomeTransportadora AS 'Transportadora', c.estado 'Estado para Entrega'
+	FROM cliente c
+	INNER JOIN pedido p ON c.idCliente = p.idCliente
+	INNER JOIN ordempedido o ON p.idPedido = o.idPedido
+	INNER JOIN transportadora t ON t.idTransportadora = p.idTransportadora
+	INNER JOIN produto pro ON pro.idProduto = o.idProduto
+	WHERE c.estado = 'SP'
+	GROUP BY t.nomeTransportadora;
+	
+
+
+
+
