@@ -634,7 +634,28 @@ SELECT pro.nomeProduto AS 'Nome do Produto', t.nomeTransportadora AS 'Transporta
 	WHERE c.estado = 'SP'
 	GROUP BY t.nomeTransportadora;
 	
+#xiv. Nome dos produtos transportados pela TRANSCAR.
 
+SELECT * from pedido;
 
+SELECT pr.nomeProduto 'Produto', t.nomeTransportadora 'Transportadora'
+	FROM produto pr
+	INNER JOIN ordempedido o ON o.idProduto = pr.idProduto
+	INNER JOIN pedido p ON p.idPedido = o.idPedido
+	INNER JOIN transportadora t ON t.idTransportadora = p.idTransportadora
+	WHERE t.nomeTransportadora = 'TRANSCAR';
+	
+#xv. Nome dos clientes que compraram o produto SPMW34
 
+SELECT * FROM pedido;
+SELECT * FROM produto;
+SELECT * FROM cliente;
+SELECT * FROM ordempedido;
 
+SELECT c.nomeCliente 'Cliente', pro.idProduto 'ID Produto', pro.nomeProduto 'Nome do Produto'
+	FROM cliente c
+	INNER JOIN pedido p ON p.idCliente = c.idCliente
+	INNER JOIN ordempedido o ON o.idPedido = p.idPedido
+	INNER JOIN produto pro ON pro.idProduto = o.idProduto
+	WHERE pro.idProduto = 3
+	GROUP BY c.nomeCliente;
