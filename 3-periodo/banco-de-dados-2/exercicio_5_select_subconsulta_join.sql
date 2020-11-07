@@ -652,6 +652,8 @@ SELECT * FROM produto;
 SELECT * FROM cliente;
 SELECT * FROM ordempedido;
 
+#OBS: nesta questão substitui o código 'SPMW34' pelo numero 3 com o objetivo de realizar a consulta correta.
+
 SELECT c.nomeCliente 'Cliente', pro.idProduto 'ID Produto', pro.nomeProduto 'Nome do Produto'
 	FROM cliente c
 	INNER JOIN pedido p ON p.idCliente = c.idCliente
