@@ -6,3 +6,4 @@ Fahrenheit = (1,8 x Celsius) + 32
 
 temperatura = float(input("Digite a temperatura em Graus Celcius: "))
 
+print("Convertendo {} graus Celcius em Farenheit fica: {}".format(temperatura, ((1.8 * temperatura) + 32)))
