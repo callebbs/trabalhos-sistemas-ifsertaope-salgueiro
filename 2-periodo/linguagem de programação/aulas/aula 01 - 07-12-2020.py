@@ -28,12 +28,14 @@ nome = input("Digite seu nome: ") - a função input() espera do usuário que in
 
 ========== Criando o primeiro programa ==========
 
-* Agora vamos criar um programa básico de média de notas:
+* Programa básico de média de notas:
 
 nota1 = float(input("Digite a primeira nota: "))
 nota2 = float(input("Digite a segunda nota: "))
 
 media = (nota1 + nota2) / 2
+
+* fim do programa
 
 float é um tipo de dado de ponto flutuante / número real
 
