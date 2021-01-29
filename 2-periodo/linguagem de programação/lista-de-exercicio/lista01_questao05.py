@@ -4,3 +4,4 @@ O programa terá uma lista de palavras e escolherá uma aleatoriamente.
 O jogador terá três tentativas para adivinhar a palavra. Ao final a palavra sorteada deverá ser  
 mostrada na tela, informando se o usuário ganhou ou perdeu o jogo. 
 '''
+

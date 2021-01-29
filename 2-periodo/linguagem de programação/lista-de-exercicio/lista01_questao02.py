@@ -11,3 +11,10 @@ ULANO
  O
 
 '''
+
+nome = str(input("Digite o seu nome: ")).upper()
+tamanho = len(nome)
+
+for i in range(0, tamanho):
+    #print(f"{nome[i:tamanho]}")
+    print(" {0:>10}".format(nome[i:tamanho]))
