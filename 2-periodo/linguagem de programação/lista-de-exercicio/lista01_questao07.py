@@ -39,7 +39,6 @@ def marcarTarefa():
     tarefaconcluida = "* " + tarefas[mtarefa] + " *"
     tarefas[mtarefa] = tarefaconcluida
 
-
 def menu():
     import os
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -73,4 +72,5 @@ def menu():
 
 #-------------------------------------------------
 
+tarefas = [" "]
 menu()
