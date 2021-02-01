@@ -6,7 +6,7 @@ mostrada na tela, informando se o usuário ganhou ou perdeu o jogo.
 '''
 
 import random
-nomesProf = ["kelsen", "orlando", "francisco", "francenila", "marcelo", "alice", "josenildo", "augusto", "raquel"]
+nomesProf = ["kelsen", "orlando", "francisco", "francenila", "marcelo", "alice", "josenildo", "augusto", "raquel", "leonardo", "woshington"]
 escolhida = random.choice(nomesProf)
 wordjogo = list(escolhida)
 random.shuffle(wordjogo)
