@@ -17,6 +17,7 @@ temperaturas = []
 
 for i in range(0, 12):
     temperaturas.append(float(input(f"Digite a temperatura do mês {meses[i]}: ")))
+
 print("-" * 50)
 print("Média Anual da temperatura: ", (mediaListas(temperaturas)))
 print("-" * 50)

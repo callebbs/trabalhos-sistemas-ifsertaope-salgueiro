@@ -5,3 +5,23 @@ O jogador terá três tentativas para adivinhar a palavra. Ao final a palavra so
 mostrada na tela, informando se o usuário ganhou ou perdeu o jogo. 
 '''
 
+import random
+nomesProf = ["kelsen", "orlando", "francisco", "francenila", "marcelo", "alice", "josenildo", "augusto", "raquel"]
+escolhida = random.choice(nomesProf)
+wordjogo = list(escolhida)
+random.shuffle(wordjogo)
+
+print("-" * 30)
+print("-----Jogo da Adivinhação------\nDentre os nomes dos professores\nde Sistemas Para Internet no IF-Sertão Salgueiro\nTente adivinhar quem é essa pessoa: -> {}".format(''.join(wordjogo)))
+print("-" * 30)
+
+palpite = str(input(("Você tem TRÊS tentativas.\nDigite a seu palpite: ")))
+
+for i in range(0, 3):
+    if palpite == escolhida:
+        print("Parabéns! Você acertou! O nome sorteado é: {}".format(escolhida))
+        break
+    elif i == 2:
+        print("Suas chances acabaram e você não acertou! O nome era: {}". format(escolhida))
+    else:
+        palpite == str(input("Você errou. Tente novamente!\nDigite outro palpite: "))
