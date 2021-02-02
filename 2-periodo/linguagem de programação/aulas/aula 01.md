@@ -34,6 +34,7 @@ Utilizando os conceitos abordados aqui vamos criar nosso primeiro programa.
 nome = input("Digite seu nome: ")
 print("Bem vindo", nome)
 ```
+
 Mostrando na tela:
 
 Digite seu nome: João
