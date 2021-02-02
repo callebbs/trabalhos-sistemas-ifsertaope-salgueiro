@@ -35,5 +35,6 @@ nome = input("Digite seu nome: ")
 print("Bem vindo", nome)
 ```
 Mostrando na tela:
->Digite seu nome: João
->Bem vindo, João
+
+Digite seu nome: João
+Bem vindo, João
