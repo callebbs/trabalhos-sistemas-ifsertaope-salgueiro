@@ -1,4 +1,4 @@
-# Aula 01 - Python
+# Aula 01 - Python - Introdução
 
 Aulas da cadeira de Linguagem de Programação do Curso de Sistemas para Internet do IF-Sertão PE - Campus Salgueiro.
 
@@ -15,16 +15,23 @@ Aulas da cadeira de Linguagem de Programação do Curso de Sistemas para Interne
 
 >### Exemplos:
 `int = 10` - variável int recebe o valor 10 (int / número inteiro)
+
 `num = 10.7` - variável int recebe o valor 10.7 (float / número real)
+
 `nome = "João"` - variável nome recebe a string "João" (strings sempre vem entre aspas)
+
 
 ## Entrada de Dados
 
 `nome = input("Digite seu nome: ")`
+
 a função input() espera do usuário que insira os dados para armazenar na variável.
 
-Saída na tela:
->Digite seu nome: 
+>Saída na tela:
+
+```
+Digite seu nome:
+```
 
 # Criando o primeiro programa
 Utilizando os conceitos abordados aqui vamos criar nosso primeiro programa.
@@ -35,9 +42,9 @@ nome = input("Digite seu nome: ")
 print("Bem vindo", nome)
 ```
 
-Mostrando na tela:
+>Mostrando na tela:
 
-Mostrando na tela:
->Digite seu nome: João
-
->Bem vindo, João
+```
+Digite seu nome: João
+Bem vindo, João
+```
