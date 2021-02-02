@@ -35,3 +35,5 @@ media = (nota1 + nota2) / 2
 
 print("Sua média é: ", media)
 ```
+
+[Página 1](https://github.com/callebbs/trabalhos-sistemas-ifsertaope-salgueiro/blob/master/2-periodo/linguagem%20de%20programa%C3%A7%C3%A3o/aulas/aula%2001%20-%20introdu%C3%A7%C3%A3o.md)
