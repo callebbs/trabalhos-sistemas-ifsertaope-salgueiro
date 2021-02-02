@@ -36,7 +36,7 @@ Digite seu nome:
 # Criando o primeiro programa
 Utilizando os conceitos abordados aqui vamos criar nosso primeiro programa.
 
- ## Programa básico de média de notas
+ ## Programa básico de boas vindas
 ```
 nome = input("Digite seu nome: ")
 print("Bem vindo", nome)
