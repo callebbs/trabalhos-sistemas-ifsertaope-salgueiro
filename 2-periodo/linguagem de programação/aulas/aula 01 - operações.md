@@ -27,9 +27,11 @@ Ao utilizar o IDLE, pode-se utilizar os cálculos diretamente, sem a necessidade
 
 ## Criando um programa para cálculo de média
 
+```
 nota1 = int(input("Digite a sua primeira nota: "))
 nota2 = int(input("Digite a sua segunda nota: "))
 
 media = (nota1 + nota2) / 2
 
 print("Sua média é: ", media)
+```
