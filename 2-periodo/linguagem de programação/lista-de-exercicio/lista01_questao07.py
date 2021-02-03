@@ -70,7 +70,7 @@ def menu():
             print("Programa finalizado.")
             break
 
-#-------------------------------------------------
+
 
 tarefas = [" "]
 menu()
