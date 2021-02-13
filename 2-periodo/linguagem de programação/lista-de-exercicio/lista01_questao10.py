@@ -19,7 +19,7 @@ def PilotoMaisRapido():
     piloto = corredores[0]
     voltaMaisRapida = 0
 
-    for pilotos in range(0, 2):
+    for pilotos in range(0, 6):
         for voltas in range(0, 3):
             if dicionario_voltas[(corredores[pilotos])][voltas] < menorVolta:
                 menorVolta = dicionario_voltas[corredores[pilotos]][voltas]
@@ -30,13 +30,13 @@ def PilotoMaisRapido():
 
 #criação do nome dos pilotos
 
-for nomes in range(0, 2):
+for nomes in range(0, 6):
     nome_corredor = input(f"Informe o nome do corredor {nomes+1}: ")
     corredores.append(nome_corredor)
 
 #criação das voltas de cada piloto
 
-for i in range(0, 2):
+for i in range(0, 6):
     dicionario_voltas[corredores[i]] = float(input(f"Informe os tempos (em segundos) das três voltas do piloto(a) {i+1}:\nVolta 1: ")), float(input("Volta 2: ")),float(input("Volta 3: "))
 
 
