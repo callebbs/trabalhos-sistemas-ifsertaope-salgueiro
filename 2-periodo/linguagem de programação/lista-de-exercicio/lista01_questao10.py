@@ -28,10 +28,6 @@ def PilotoMaisRapido():
 
     print(f"A menor volta foi do piloto(a) {piloto}, na {voltaMaisRapida+1}ª volta com o tempo de {menorVolta} segundos.")
 
-   
-    
-
-
 #criação do nome dos pilotos
 
 for nomes in range(0, 2):
