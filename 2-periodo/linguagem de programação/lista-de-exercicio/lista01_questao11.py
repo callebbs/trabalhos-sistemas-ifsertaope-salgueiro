@@ -12,3 +12,14 @@ d. Excluir Nome – exclui uma pessoa da agenda.
 e. Consultar Telefone – retorna os telefones de uma pessoa na agenda. 
 
 '''
+contatos = {}
+telefones = []
+
+def addNovoContato():
+    nome = input("Digite o nome do novo contato: ")
+    telefones = input(f"Digite o numero do contato {nome}: ")
+    contatos[nome] = telefones
+    return print(f"Contato {nome} adicionado com sucesso!")
+
+def addNovoNumero():
+    nome = input("Deseja adicionar um ")
