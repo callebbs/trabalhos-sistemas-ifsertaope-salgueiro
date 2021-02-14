@@ -5,3 +5,5 @@ e na ordem  inversa, menos o padrão.
 
 Obs.: É proibido usar qualquer função da biblioteca de Python que inverta listas. 
 '''
+
+
