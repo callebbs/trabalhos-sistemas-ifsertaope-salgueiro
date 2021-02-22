@@ -1,0 +1,4 @@
+Aluno: Benjamim Calleb Bezerra de Siqueira
+Criando um arquivo de texto com Python
+Arquivo criado através da atividade do Prof. Orlando
+O curso de Sistemas para Internet é ótimo!
