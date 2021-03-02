@@ -1,0 +1,6 @@
+;Boa noite!
+>Sistemas
+*Internet
+>Linguagem
+>Python
+*Leitura de arquivos
