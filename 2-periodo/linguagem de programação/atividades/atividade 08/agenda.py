@@ -72,4 +72,5 @@ def menu():
         elif escolha == 4:
             print("Programa finalizado.")
             break
+
 menu()
