@@ -4,7 +4,7 @@ import requests
 local = input("Digite sua localidade: ")
 
 
-chave = "9f5652c7e9773515c5705cb5f780e628"
+chave = ""
 
 url = f"http://api.openweathermap.org/data/2.5/forecast?q={local}&appid={chave}"
 
