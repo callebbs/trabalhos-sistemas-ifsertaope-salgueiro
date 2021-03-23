@@ -40,4 +40,3 @@ elif idioma_traducao == "es":
 
 print(dados["data"]["translations"][0]['translatedText'])
 print("-" * 50)
-print(payload)
