@@ -1,8 +1,6 @@
-'''
-TRADUTOR: Implemente uma aplicação que recebe, através do teclado, 
-um texto em português e o traduza para o inglês ou espanhol com a API JSON do Google Tradutor, 
-conforme escolha do usuário. Por fim, apresente o texto traduzido na tela.
-'''
+#nova key foi gerada para o professor avaliar o código
+
+#questão respondida ao som de Nirvana - Nevermind (1991)
 
 import requests
 import json
@@ -13,7 +11,6 @@ url = "https://google-translate1.p.rapidapi.com/language/translate/v2"
 
 texto = str(input('Digite o texto para tradução: '))
 texto_convertido = urllib.parse.quote(texto)
-print(texto_convertido)
 
 idioma_traducao = str(input("Qual idioma quer traduzir o texto?\n** Digite en para Inglês **\n** Digite es para Espanhol **\nDigite sua escolha: "))
 
