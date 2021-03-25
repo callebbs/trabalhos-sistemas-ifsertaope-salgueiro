@@ -82,7 +82,7 @@ for i in range(0, 508):
 #gerando gráficos de infectados por Estado
 print("Gerando gráficos...")
 grafico.plot(dias_infectados_estados, infectados_estados)
-grafico.title('Dados de Infectados em Pernambuco')
+grafico.title(f'Dados de Infectados em {estado}')
 grafico.xlabel("Dias corridos da Pandemia")
 grafico.ylabel("Quantidade de infectados")
 grafico.show()
