@@ -12,40 +12,6 @@ resposta.raise_for_status
 dados = json.loads(resposta.text)
 dias = len(dados)
 
-def DadosEstados():
-    #variáveis e listas para armazenar dados dos Estados
-    infectados_estados = []
-    dias_infectados_estados = []
-    mortes_estados = []
-    dias_mortes_estados = []
-    quantidade_dias_infectados_estados = 0
-    quantidade_dias_mortes_estados = 0
-    quantidade_infectados_estados = 0
-    quantidade_mortes_estados = 0
-
-    #obtendo dados infectados por Estado
-    for i in range(0, dias):
-        for j in range(0, len(dados[i]['infectedByRegion'])):
-            if dados[i]['infectedByRegion'][j]['state'] == sigla_estado:
-                quantidade_infectados_estados = dados[i]['infectedByRegion'][j]['count']
-                infectados_estados.append(quantidade_infectados_estados)
-                quantidade_dias_infectados_estados = quantidade_dias_infectados_estados + 1
-                dias_infectados_estados.append(quantidade_dias_infectados_estados)
-            else:
-                continue
-
-    #dados mortes por Estado
-    for i in range(1, dias):
-        for j in range(0, len(dados[i]['deceasedByRegion'])):
-            if dados[i]['deceasedByRegion'][j]['state'] == sigla_estado:
-                quantidade_mortes_estados = dados[i]['deceasedByRegion'][j]['count']
-                mortes_estados.append(quantidade_mortes_estados)
-                quantidade_dias_mortes_estados = quantidade_dias_mortes_estados + 1
-                dias_mortes_estados.append(quantidade_dias_mortes_estados)
-            else:
-                continue
-
-
 def clear():
     #função para limpar a tela
     import os
@@ -144,6 +110,46 @@ def GraficosEstado():
             break
 
     print(f"Estado selecionado: {estado}")
+
+    #variáveis e listas para armazenar dados dos Estados
+    infectados_estados = []
+    dias_infectados_estados = []
+    mortes_estados = []
+    dias_mortes_estados = []
+    quantidade_dias_infectados_estados = 0
+    quantidade_dias_mortes_estados = 0
+    quantidade_infectados_estados = 0
+    quantidade_mortes_estados = 0
+
+    #obtendo dados infectados por Estado
+    for i in range(0, dias):
+        for j in range(0, len(dados[i]['infectedByRegion'])):
+            if dados[i]['infectedByRegion'][j]['state'] == sigla_estado:
+                quantidade_infectados_estados = dados[i]['infectedByRegion'][j]['count']
+                infectados_estados.append(quantidade_infectados_estados)
+                quantidade_dias_infectados_estados = quantidade_dias_infectados_estados + 1
+                dias_infectados_estados.append(quantidade_dias_infectados_estados)
+            else:
+                continue
+
+    #gerando gráficos de infectados por Estado
+    print("Gerando gráficos...")
+    grafico.plot(dias_infectados_estados, infectados_estados)
+    grafico.title(f'Dados de Infectados em {estado}')
+    grafico.xlabel("Dias corridos da Pandemia")
+    grafico.ylabel("Quantidade de infectados")
+    grafico.show()
+
+    #dados mortes por Estado
+    for i in range(1, dias):
+        for j in range(0, len(dados[i]['deceasedByRegion'])):
+            if dados[i]['deceasedByRegion'][j]['state'] == sigla_estado:
+                quantidade_mortes_estados = dados[i]['deceasedByRegion'][j]['count']
+                mortes_estados.append(quantidade_mortes_estados)
+                quantidade_dias_mortes_estados = quantidade_dias_mortes_estados + 1
+                dias_mortes_estados.append(quantidade_dias_mortes_estados)
+            else:
+                continue
 
     #gerando gráficos de mortes por Estado
     grafico.plot(dias_mortes_estados, mortes_estados)

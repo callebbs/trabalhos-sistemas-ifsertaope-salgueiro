@@ -97,8 +97,8 @@ grafico.show()
 for i in range(1, 509):
     for j in range(0, len(dados[i]['deceasedByRegion'])):
         if dados[i]['deceasedByRegion'][j]['state'] == sigla_estado:
-            quantidade_mortes = dados[i]['deceasedByRegion'][j]['count']
-            mortes_estados.append(quantidade_mortes)
+            quantidade_mortes_estados = dados[i]['deceasedByRegion'][j]['count']
+            mortes_estados.append(quantidade_mortes_estados)
             quantidade_dias_mortes_estados = quantidade_dias_mortes_estados + 1
             dias_mortes_estados.append(quantidade_dias_mortes_estados)
         else:
