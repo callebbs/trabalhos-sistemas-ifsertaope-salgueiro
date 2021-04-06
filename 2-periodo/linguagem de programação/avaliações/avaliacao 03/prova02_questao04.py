@@ -7,5 +7,12 @@ arquivo = open('notas.json', 'r')
 dados = json.load(arquivo)
 arquivo.close()
 
-aprovados = 
-print(aprovados)
+print("Alunos aprovados: ")
+aprovados = lambda dados: print(dados[i])
+
+aluno = []
+
+for i in range(len(dados)):
+    media_notas = (dados[i]['nota1'] + dados[i]['nota2']) / 2
+    if media_notas >= 7:
+        aluno = aprovados(dados)
