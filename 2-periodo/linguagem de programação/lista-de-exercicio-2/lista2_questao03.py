@@ -7,7 +7,7 @@ import json
 import os
 import urllib.parse
 
-url = "https://google-translate1.p.rapidapi.com/language/translate/v2"
+url = #LINK DA API
 
 texto = str(input('Digite o texto para tradução: '))
 texto_convertido = urllib.parse.quote(texto)
