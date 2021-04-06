@@ -5,3 +5,4 @@ Açúcar: 2.35
 Batata: 2.30
 Tomate: 9.00
 Cebola: 7.30
+Abacate 5.10
