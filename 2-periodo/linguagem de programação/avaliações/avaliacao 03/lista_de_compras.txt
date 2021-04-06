@@ -1,7 +1,0 @@
-Arroz: 5.00
-Feijão: 8.50
-Macarrão: 4.75
-Açúcar: 2.35
-Batata: 2.30
-Tomate: 9.00
-Cebola: 7.30
