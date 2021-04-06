@@ -1,0 +1,3 @@
+'''
+Crie uma aplicação em Python que lê um arquivo JSON contendo os nomes e  notas de vários alunos. O programa deverá calcular e mostrar os nomes, as médias e a situação dos alunos aprovados (média >= 7), reprovados (média < 7) e em recuperação (média >= 4 e média <7). Observação: crie pelo menos 3 funções para auxiliar na solução do problema e gere um gráfico com as estatísticas dos aprovados, reprovados e em recuperação. Abaixo segue o modelo de arquivo que o programa deverá utilizar.
+'''

@@ -1,0 +1,4 @@
+Arroz: 5.00
+Feijão: 8.50
+Macarrão: 4.75
+Açúcar: 2.35
