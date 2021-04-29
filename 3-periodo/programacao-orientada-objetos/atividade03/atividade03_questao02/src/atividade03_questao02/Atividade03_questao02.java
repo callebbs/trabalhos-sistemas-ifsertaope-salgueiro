@@ -1,6 +1,6 @@
 /**
- * Escreva um programa que receba a idade de 10 pessoas, calcule e imprima
- * a quantidade de pessoas maiores de idade (idade >= 18 anos).
+Escreva um programa que receba a idade de 10 pessoas, calcule e imprima
+a quantidade de pessoas maiores de idade (idade >= 18 anos).
  */
 
 package atividade03_questao02;

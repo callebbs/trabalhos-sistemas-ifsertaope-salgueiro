@@ -1,3 +1,15 @@
+/*
+Faça um programa que receba um número inteiro positivo N e mostre na tela 
+a seguinte sequência de números:
+1
+2 2
+3 3 3
+4 4 4 4
+.
+.
+.
+n n n n ... n
+*/
 package atividade03_questao03;
 
 import java.util.Scanner;

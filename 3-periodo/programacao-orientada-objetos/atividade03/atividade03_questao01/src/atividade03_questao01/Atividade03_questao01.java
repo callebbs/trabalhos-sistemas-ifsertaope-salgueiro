@@ -1,3 +1,10 @@
+/*
+Uma empresa decide dar um aumento de 15% aos funcionários com salário inferior 
+a R$ 1000,00. Faça um programa que receba o salário do funcionário e mostre 
+o valor do salário reajustado ou uma mensagem, caso ele não tenha direito 
+ao aumento.
+*/
+
 package atividade03_questao01;
 
 import java.util.Scanner;
