@@ -1,21 +1,38 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Array
  */
 package aula003.pkg1;
 
-/**
- *
- * @author calle
- */
+import java.util.Scanner;
+
 public class Aula0031 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Array - Vetor e Matriz
+        // int[] valores, variavel1, variavel2 - Cria vários arrays
+        // ou int valores[];
+        int[] valores = new int[10];
+        
+        /*
+        valores[0] = 25;
+        valores[1] = 5;
+        valores[2] = 47;
+        valores[3] = 89;
+        // último índice
+        valores[9] = 77;
+        */
+        
+        Scanner input = new Scanner(System.in);
+        
+        for(int i = 0; i < valores.length; i++){
+            System.out.print("Digite um número:");
+            valores[i] = input.nextInt();
+        }
+        
+        for (int i = 0; i < valores.length; i++) {
+            System.out.println( valores[i] );
+        }
+        
     }
     
 }
