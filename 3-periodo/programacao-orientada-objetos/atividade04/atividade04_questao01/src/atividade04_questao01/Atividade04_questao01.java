@@ -35,14 +35,10 @@ public class Atividade04_questao01 {
             if (valores[i] % 2 != 0) {
                 System.out.print(valores[i] + " ");
                 soma_impares = soma_impares + valores[i];
-                
             }
         }
         System.out.print("\n");
         System.out.println("Quantidade de números pares recebidos: " + quantidade_pares);
         System.out.println("Somatório de números ímpares recebidos: " + soma_impares);
-        
         }
-
-    
 }
