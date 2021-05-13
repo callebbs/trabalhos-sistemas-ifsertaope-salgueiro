@@ -23,5 +23,4 @@ public class Atividade05_questao02 {
         lampada.desligar();
         System.out.println("A lâmpada está: " + lampada.estado);
     }
-    
 }
