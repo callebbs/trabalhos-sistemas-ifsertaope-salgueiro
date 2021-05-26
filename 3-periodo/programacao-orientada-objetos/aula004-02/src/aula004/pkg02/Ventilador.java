@@ -2,11 +2,11 @@ public class Ventilador {
     
     private int velocidade;
     
-    Ventilador(){
+    public Ventilador(){
         velocidade = 0;
     }
     
-    void aumentarVelocidade(int vel){
+    public void aumentarVelocidade(int vel){
         if(vel >= 0 && vel <= 3){
             velocidade = vel;
         } else {
@@ -14,7 +14,7 @@ public class Ventilador {
         }
     }
     
-    int consultarVelocidade(){
+    public int consultarVelocidade(){
         return velocidade;
     }
 }
