@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Formulários</title>
+</head>
+<body>
+
+    <!-- checked atributo que já deixa uma opção marcada ao carregar -->
+    <!-- autocomplete atributo que liga ou desliga o autocompletar de campos -->
+    <!-- placeholder atributo que mostra dentro do campo um texto como exemplo -->
+
+    <fieldset>
+        <legend>Informações pessoais</legend>
+        Nome: <br>
+        <input type="text" name="nome" required autofocus maxlength="8" autocomplete="off" placeholder="Fulano"> <br>
+        Senha: <br>
+        <input type="password" name="senha" required placeholder="Evite 123456"> <br>
+        Email: <br>
+        <input type="email" name="email" required autocomplete="off" placeholder="seuemail@email.com"><br>
+        Time: <br>
+        <input type="radio" nome="time" value="vasco">Vasco <br>
+        <input type="radio" nome="time" value="botafogo">Botafogo <br>
+        <input type="radio" nome="time" value="fluminense">Fluminense <br>
+        <input type="radio" nome="time" value="flamengo">Flamengo <br>
+        Cores: <br>
+        <input type="checkbox" nome="cores" value="verde">Verde <br>
+        <input type="checkbox" nome="cores" value="azul">Azul <br>
+        <input type="checkbox" nome="cores" value="preto">Preto <br>
+
+        <br>
+        <input type="submit" name="btn-enviar" value="Enviar"> <br>
+    </fieldset>
+
+    
+
+    
+</body>
+</html>

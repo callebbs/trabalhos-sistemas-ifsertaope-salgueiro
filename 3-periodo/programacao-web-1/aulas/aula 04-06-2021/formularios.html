@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <!-- required atributo para deixar o campo do formulário obrigatório -->
+    <!-- autofocus atributo para o campo ficar em foco assim que a página carrega -->
+    <!-- disabled deixar o campo desabilitado -->
+    <!-- maxlength atributo que determina o número máximo de caracteres no campo -->
+
+    <form action="Cadastro.php" method="GET">
+
+        <fieldset>
+            <legend>Informações pessoais</legend>
+            Nome: <br>
+            <input type="text" name="nome" required autofocus maxlength="8"> <br>
+            Senha: <br>
+            <input type="password" name="senha" required> <br>
+            <input type="submit" name="btn-enviar" value="Enviar">
+        </fieldset>
+
+
+
+    </form>
+    
+</body>
+</html>
