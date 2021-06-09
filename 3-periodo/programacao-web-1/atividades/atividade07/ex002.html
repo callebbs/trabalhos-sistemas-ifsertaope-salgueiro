@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 02 - Formulários</title>
+    <title>Atividade 07 - Exercício 02</title>
+    <style>
+        td {font-family: Arial; padding-right: 100px;}
+        tr {padding: 2px;}
+    </style>
 </head>
 <body>
+
+    <table>
+        <tr>
+            <td style="background-color: darkgoldenrod;">SISTEMA DE GESTÃO ACADÊMICA</td>
+        </tr>
+        <tr>
+            <td>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>Login</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Senha</td>
+            <td><input type="password"></td>
+        </tr>
+
+        <tr>
+            <td>Status</td>
+            <td>
+                <select name="inativo" id="inativo">
+                    <option value="inativo" checked>Inativo</option>
+                    <option value="ativo">Ativo</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Tipo</td>
+            <td>
+                <input type="radio" name="tipo" value="tecnico">Técnico
+                <input type="radio" name="tipo" value="professor">Professor
+                <input type="radio" name="tipo" value="aluno">Aluno <br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Data Criação</td>
+            <td><input type="date"></td>
+        </tr>
+
+        <tr>
+            <td>Perfil</td>
+            <td>
+                <input type="radio" name="perfil" value="convidado">Convidado
+                <input type="radio" name="perfil" value="administrador">Administrador <br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Observações</td>
+            <td><textarea name="" id="" cols="30" rows="5"></textarea> <br></td>
+        </tr>
+
+        <tr>
+            <td>Módulos</td>
+            <td>
+                <input type="radio" name="modulos" value="compras">Compras
+                <input type="radio" name="modulos" value="biblioteca">Biblioteca <br>
+                <input type="radio" name="modulos" value="documentacao">Documentação
+                <input type="radio" name="modulos" value="recursos_humanos">Recursos Humanos
+            </td>
+        </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td style="padding-right: 1px;"><button type="button">Cadastrar</button></td>
+                <td style="padding-right: 1px;"><button type="button">Excluir</button></td>
+            </tr>
+        </table>
+
     
 </body>
 </html>
