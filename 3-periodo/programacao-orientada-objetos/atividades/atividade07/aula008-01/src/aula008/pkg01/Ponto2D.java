@@ -29,4 +29,5 @@ public class Ponto2D {
     public String toString() {
         return "("+x+","+y+")";
     }
+
 }
