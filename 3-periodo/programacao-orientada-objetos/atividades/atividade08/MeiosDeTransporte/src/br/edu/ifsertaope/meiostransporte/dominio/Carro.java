@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.ifsertaope.meiostransporte.dominio;
 
-/**
- *
- * @author calle
- */
-public class Carro {
+public class Carro extends Automovel {
+    private int qtdPortas;
+
+    public int getQtdPortas() {
+        return qtdPortas;
+    }
+
+    public void setQtdPortas(int qtdPortas) {
+        this.qtdPortas = qtdPortas;
+    }
     
+    public void imprimirInformacoes() {
+        System.out.println("-------------------------------------");
+        System.out.println("Marca: " + getMarca());
+        System.out.println("Quantidade de Rodas: " + getQtdRodas());
+        System.out.println("Modelo: " + getModelo());
+        System.out.println("Quantidade de Portas: " + getQtdPortas());
+        System.out.println("Velocidade: " + getVelocidade());
+        System.out.println("-------------------------------------");
+    }
 }
