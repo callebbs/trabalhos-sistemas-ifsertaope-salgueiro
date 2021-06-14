@@ -12,6 +12,7 @@ public class Carro extends Automovel {
     }
     
     public void imprimirInformacoes() {
+        System.out.println("Informações do Carro");
         System.out.println("-------------------------------------");
         System.out.println("Marca: " + getMarca());
         System.out.println("Quantidade de Rodas: " + getQtdRodas());
