@@ -12,15 +12,12 @@ public class MeiosDeTransporte {
         
         String marca;
         int qtdRodas;
+        String modelo;
+        int velocidade;
+        int numMarchas;
+        boolean bagageiro;
         
-        System.out.println("Insira as informações a seguir: ");
-        System.out.println("Bicileta");
-        System.out.print("Digite a Marca: ");
-        marca = input.nextLine();
-        bike1.setMarca(marca);
-        System.out.print("Digite a quantidade de rodas: ");
-        qtdRodas = input.nextInt();
-        bike1.setQtdRodas(qtdRodas);
+        
         
     }
     
