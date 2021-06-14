@@ -1,23 +1,27 @@
 package br.edu.ifsertaope.meiostransporte.dominio;
 
+import java.util.Scanner;
+
 public class MeiosDeTransporte {
 
     public static void main(String[] args) {
         Bicicleta bike1 = new Bicicleta();
         Moto moto1 = new Moto();
         Carro carro1 = new Carro();
-    
-        bike1.imprimirInformacoes();
+        Scanner input = new Scanner(System.in);
         
-        moto1.imprimirInformacoes();
+        String marca;
+        int qtdRodas;
         
-        carro1.setQtdPortas(4);
+        System.out.println("Insira as informações a seguir: ");
+        System.out.println("Bicileta");
+        System.out.print("Digite a Marca: ");
+        marca = input.nextLine();
+        bike1.setMarca(marca);
+        System.out.print("Digite a quantidade de rodas: ");
+        qtdRodas = input.nextInt();
+        bike1.setQtdRodas(qtdRodas);
         
-        carro1.imprimirInformacoes();
-        
-        carro1.acelerar(20);
-        
-        carro1.imprimirInformacoes();
     }
     
 }
