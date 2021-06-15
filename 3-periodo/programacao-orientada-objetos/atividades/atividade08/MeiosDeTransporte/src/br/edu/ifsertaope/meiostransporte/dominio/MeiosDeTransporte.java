@@ -48,7 +48,7 @@ public class MeiosDeTransporte {
         System.out.print("Começar a andar com a bicileta (Digite Sim ou Não)? ");
         sair = input.next();
         if ("Sim".equals(sair)) {
-            System.out.println("Digite a velocidade da Bicicleta: ");
+            System.out.print("Digite a velocidade da Bicicleta: ");
             velocidade = input.nextInt();
             bike1.setVelocidade(velocidade);
         } else {
@@ -82,7 +82,7 @@ public class MeiosDeTransporte {
         System.out.print("Começar a andar com o carro (Digite Sim ou Não)? ");
         sair = input.next();
         if ("Sim".equals(sair)) {
-            System.out.println("Digite a velocidade do carro: ");
+            System.out.print("Digite a velocidade do carro: ");
             velocidade = input.nextInt();
             carro1.setVelocidade(velocidade);
         } else {
@@ -104,7 +104,7 @@ public class MeiosDeTransporte {
         modelo = input.next();
         moto1.setModelo(modelo);
         
-        System.out.println("Digite a potência do motor: ");
+        System.out.print("Digite a potência do motor: ");
         potenciaDoMotor = input.nextDouble();
         moto1.setPotenciaDoMotor(potenciaDoMotor);
         
@@ -115,7 +115,7 @@ public class MeiosDeTransporte {
         System.out.print("Começar a andar com a moto (Digite Sim ou Não)? ");
         sair = input.next();
         if ("Sim".equals(sair)) {
-            System.out.println("Digite a velocidade do carro: ");
+            System.out.print("Digite a velocidade do carro: ");
             velocidade = input.nextInt();
             moto1.setVelocidade(velocidade);
         } else {
