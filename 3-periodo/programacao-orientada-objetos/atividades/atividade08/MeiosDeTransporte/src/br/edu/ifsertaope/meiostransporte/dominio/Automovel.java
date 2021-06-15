@@ -1,6 +1,5 @@
 package br.edu.ifsertaope.meiostransporte.dominio;
 
-
 public class Automovel extends Veiculo {
     
     private double potenciaDoMotor;
