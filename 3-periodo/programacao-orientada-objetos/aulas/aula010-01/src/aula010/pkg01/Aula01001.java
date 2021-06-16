@@ -30,8 +30,7 @@ public class Aula01001 {
         /*
         
         Recebendo um nome
-        
-        
+                
         String nome = JOptionPane.showInputDialog("Digite seu nome:");
                 
         JOptionPane.showMessageDialog(null, "Olá, "+ nome + "!");
