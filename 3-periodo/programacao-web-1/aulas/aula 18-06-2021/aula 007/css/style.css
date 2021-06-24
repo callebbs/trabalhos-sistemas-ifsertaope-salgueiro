@@ -1,0 +1,26 @@
+#exemplo {
+    background-color: green;
+    color: #fff;
+    width: 500px;
+    height: 200px;
+    
+    /* Mudando cada lado individualmente */
+    /* padding-top: 10px; */
+    /* padding-right: 20px; */
+    /* padding-bottom: 30px; */
+    /* padding-left: 30px; */
+
+    padding: 10px 20px 30px 30px;
+}
+
+#exemplo2 {
+    background-color: red;
+    color: #fff;
+    width: 500px;
+    /* margin-top: 20px; */
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    /* margin-bottom: 10px; */
+
+    margin: 20px 30px 20px 40px;
+}

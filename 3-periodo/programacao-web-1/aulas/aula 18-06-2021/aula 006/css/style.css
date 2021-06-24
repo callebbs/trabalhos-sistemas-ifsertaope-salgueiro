@@ -1,0 +1,13 @@
+#conteudo {
+    background-color: green;
+    color: #fff;
+    padding: 20px;
+    /* width: 500px; */
+    /* height: 100px; */
+    /* max-width: 500px; */
+    /* min-width: 500px; */
+    /* max-height: 20px; */
+    /* min-height: 20px; */
+    min-width: 500px;
+    min-height: 20px;
+}

@@ -1,0 +1,60 @@
+/*  Aula 001 
+
+h1 {
+    color: blue; 
+    font-size: 60px; 
+    font-family: Tahoma;
+}
+
+
+Seletor Universal
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+Seletor TAG
+
+h1 {
+    color: blue;
+    font-size: 50px;
+}
+p {
+    color: green;
+    font-size: 12px;
+}
+
+Seletor ATRIBUTO
+
+input[type="text"] {
+    width: 200px;
+    background-color: #cccc;
+    height: 40px;
+    border: none;
+}
+
+input[type="email"] {
+    width: 200px;
+    background-color: #cccc;
+    height: 40px;
+    border: none;
+}
+
+input[type="submit"] {
+    width: 50px;
+    background-color: green;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+*/
+
+/* Agrupamento de Seletores */
+
+h1, h2, p {
+    color: red;
+    text-align: center;
+}
