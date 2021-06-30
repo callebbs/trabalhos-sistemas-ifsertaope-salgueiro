@@ -1,0 +1,10 @@
+#bloco {
+    background-color: green;
+    width: 300px;
+    height: 150px;
+    /* border-radius: 20px 50px 100px 200px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
