@@ -1,0 +1,19 @@
+* {
+    font-size: 100%;
+}
+
+p {
+    font-family: 'Jomhuria', cursive;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 2.5em;
+    /* 1em = 16px */
+}
+
+/* 
+@font-face {
+    font-family: open_sans;
+    src: url(opensans-regular-webfont.woff);
+}
+ */

@@ -1,0 +1,12 @@
+#cores {
+    width: 200px;
+    height: 200px;
+    /* background-color: #40b78c;
+    /* background-color: rgba(230, 89, 225, 0.5); 
+    a = opacidade
+    /* background-color: hsla(20, 100%, 59%, 0.2); */
+    /* background: linear-gradient(to top left, red, blue, green); */
+    /* background: linear-gradient(45deg, rgba(255, 0, 0, 0), blue, green); */
+    
+    background: radial-gradient(red, green)
+}

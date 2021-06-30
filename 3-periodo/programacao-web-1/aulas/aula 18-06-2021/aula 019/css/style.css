@@ -1,0 +1,21 @@
+#conteudo {
+    width: 600px;
+    height: 1200px;
+    background-color: red;
+    position: relative;
+}
+
+#texto {
+    width: 500px;
+    background-color: green;
+    position: fixed;
+    /* fixed o conteúdo fica fixo
+    posiciona de acordo com o navegador e não com a div pai */
+    left: 0;
+    top: 0;
+
+    /* 
+    Se usar o left e top, não é necessário usar right e bottom
+    right: 0;
+    bottom: 0; */
+}
