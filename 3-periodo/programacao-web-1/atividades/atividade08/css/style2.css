@@ -1,0 +1,41 @@
+* {
+    background-color: grey;
+}
+
+body {
+    margin: 0px;
+}
+
+
+#pagina{
+    background-color: grey; 
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    padding: 100px;
+}
+#cabecalho{
+    background-color: #333333;
+    width: 800px;
+    height: 100px; 
+    color: black;
+    text-align: left;
+}
+#menu{
+    background-color: red;
+    width: 150px; 
+    height: 340px;
+    float: left;
+}
+#corpo{
+    background-color: green;
+    width: 650px; 
+    height: 340px;
+    float: right;
+}
+#rodape{
+    background-color: white;
+    width: 800px;
+    height: 430px;
+    float: bottom;
+}

@@ -1,7 +1,15 @@
+* {
+    background-color: grey;
+    align-items: center;
+}
+
 #base {
     background-color: green;
     width: 600px;
     height: 600px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
 #esquerda {

@@ -1,0 +1,36 @@
+#topo-esquerda {
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#topo-direita {
+    background-color: yellow;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#baixo-esquerda {
+    background-color: green;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+#baixo-direita {
+    background-color: blue;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+}
