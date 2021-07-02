@@ -1,3 +1,64 @@
 * {
     background-color: #d9d9d9;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+.texto-login {
+    background-color: rgb(246, 246, 246);
+    text-align: center;
+    color: #056a75;
+    font-size: 45px;
+}
+
+
+.tela-login {
+    width: 450px;
+    height: 390px;
+    background-color: rgb(246, 246, 246);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #056a75;
+}
+
+.botao {
+    background-color: #3d9db3;
+    width: 450px;
+    height: 40px;
+    color: white;
+    text-transform: bold;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.email {
+    width: 450px;
+    height: 30px;
+    color: grey;
+    border-radius: 5px;
+}
+
+.senha {
+    width: 450px;
+    height: 30px;
+    color: grey;
+    border-radius: 5px;
+}
+
+.cadastro {
+    text-align: right;
+    width: auto;
+    height: 43px;
+    box-sizing: border-box;
+    background-color: #dbe7e8;
+    padding: 10px;
+}
+
+.botao-cadastro {
+    box-sizing: border-box;
 }
