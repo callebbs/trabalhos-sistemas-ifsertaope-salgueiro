@@ -41,6 +41,7 @@
     height: 30px;
     color: grey;
     border-radius: 5px;
+    background-color: white;
 }
 
 .senha {
@@ -48,6 +49,7 @@
     height: 30px;
     color: grey;
     border-radius: 5px;
+    background-color: white;
 }
 
 .cadastro {
@@ -60,5 +62,6 @@
 }
 
 .botao-cadastro {
-    box-sizing: border-box;
+    width: 20px;
+    font-size: large;
 }
