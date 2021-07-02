@@ -54,14 +54,28 @@
 
 .cadastro {
     text-align: right;
-    width: auto;
-    height: 43px;
+    width: 570px;
+    height: 69px;
     box-sizing: border-box;
     background-color: #dbe7e8;
-    padding: 10px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-color: #056a75;
+    position: absolute;
+    top: 79.9%;
+    left: 8.6%; 
 }
 
 .botao-cadastro {
-    width: 20px;
-    font-size: large;
+    border-style: solid;
+    border-color: #d1db46;
+    background-color: white;
+    font-size: medium;
+    color: #056a75;
+    
+    
 }
