@@ -26,7 +26,7 @@ public class ExemploInterfaces {
         Compra compra = new Compra();
         compra.setNomeCliente("João Mendonça Couves");
         compra.setProduto("Sabonete");
-        compra.setValorTotal(500);
+        compra.setValorTotal(150);
         
         Checkout checkout = new Checkout(operadora, impressora);
         checkout.fecharCompra(compra, cartao);
