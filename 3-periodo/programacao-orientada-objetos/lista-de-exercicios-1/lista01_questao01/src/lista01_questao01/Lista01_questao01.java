@@ -1,7 +1,6 @@
 package lista01_questao01;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Lista01_questao01 {
@@ -14,7 +13,7 @@ public class Lista01_questao01 {
 public static void Menu() {
     Scanner input = new Scanner(System.in);
     Produto produto;
-    List<Produto> listaProdutos = new ArrayList<Produto>();
+    ArrayList<Produto> listaProdutos = new ArrayList<Produto>();
     
     int opcao = 0;
     
@@ -55,12 +54,13 @@ public static void Menu() {
             if (listaProdutos.isEmpty()) {
                 System.out.println("Não existem produtos cadastrados. Aperte enter.");
                 input.nextLine();
-            } else {
-                for (int i = 0; int < listaProdutos.size(); i++) {
-                    System.out.println(listaProdutos.get(i));
-                }
-            }
+            }   
+        } else if (opcao == 2) {
+            System.out.println(listaProdutos.size());
             
+            for (int i = 0; i < listaProdutos.size(0) ) {
+                
+            }
         }
     
     } while (opcao != 8);
