@@ -4,10 +4,10 @@ public class Produto {
     
     // Declaração de variáveis
     private String nome;
-    private String categoria;
+    private String descricao;
     private double valor;
     private int quantidade;
-    //private int codigo;
+    private int codigo;
 
     public String getNome() {
         return nome;
@@ -17,14 +17,14 @@ public class Produto {
         this.nome = nome;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
-
+    
     public double getValor() {
         return valor;
     }
@@ -41,4 +41,22 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "Código " + codigo + " | " +
+                "Nome: " + nome + " | " +
+                "Valor: " + valor + " | " +
+                "Quantidade: " + quantidade + " | ";
+    }
 }
+
+         
