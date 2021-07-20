@@ -1,6 +1,7 @@
 package lista01_questao01;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Lista01_questao01 {
@@ -13,9 +14,10 @@ public class Lista01_questao01 {
 public static void Menu() {
     Scanner input = new Scanner(System.in);
     Produto produto;
-    ArrayList<Produto> listaProdutos = new ArrayList<Produto>();
+    List<Produto> listaProdutos = new ArrayList();
     
     int opcao = 0;
+    int altProduto;
     
     do {
         System.out.println("## SISPET ##");
@@ -50,16 +52,31 @@ public static void Menu() {
             produto.setCodigo(Integer.parseInt(input.nextLine()));
             
             listaProdutos.add(produto);
+        } else if (opcao == 3) {
+            for (int i = 0; i < listaProdutos.size(); i++) {
+                System.out.println(listaProdutos.get(i));
+            }
+            System.out.println("Digite o código do item que deseja editar: ");
+            altProduto = input.nextInt();
+            
+            for (int i = 0; i < listaProdutos.size(); i++) {
+                
+                    
+                }
+            }
+            
+            
+            
+        
         } else if (opcao == 7) {
             if (listaProdutos.isEmpty()) {
-                System.out.println("Não existem produtos cadastrados. Aperte enter.");
+                System.out.print("Não existem produtos cadastrados.\nAperte enter para continuar.");
                 input.nextLine();
-            }   
-        } else if (opcao == 2) {
-            System.out.println(listaProdutos.size());
-            
-            for (int i = 0; i < listaProdutos.size(0); i++ ) {
-                
+            } else {
+            System.out.println("Produtos em estoque: ");
+            for (int i = 0; i < listaProdutos.size(); i++ ) {
+                System.out.println(listaProdutos.get(i));
+            }
             }
         }
     
