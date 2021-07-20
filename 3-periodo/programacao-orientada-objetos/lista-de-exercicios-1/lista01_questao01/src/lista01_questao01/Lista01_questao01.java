@@ -58,7 +58,7 @@ public static void Menu() {
         } else if (opcao == 2) {
             System.out.println(listaProdutos.size());
             
-            for (int i = 0; i < listaProdutos.size(0) ) {
+            for (int i = 0; i < listaProdutos.size(0); i++ ) {
                 
             }
         }
