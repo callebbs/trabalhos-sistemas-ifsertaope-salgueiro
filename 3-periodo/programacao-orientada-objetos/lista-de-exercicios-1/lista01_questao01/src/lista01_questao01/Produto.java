@@ -1,67 +1,44 @@
 package lista01_questao01;
 
-import java.util.Scanner;
-import java.util.ArrayList;
-
 public class Produto {
+    
     // Declaração de variáveis
     private String nome;
-    private String descricao;
     private String categoria;
     private double valor;
     private int quantidade;
-    private int codigo;
-    
-    // Instanciamento de objetos
-    Scanner input = new Scanner(System.in);
-    ArrayList<String> listaNomes = new ArrayList();
-    ArrayList<String> listaDescricoes = new ArrayList();
-    ArrayList<String> listaCategorias = new ArrayList();
-    ArrayList<Double> listaValores = new ArrayList();
-    ArrayList<Integer> listaQuantidades = new ArrayList();
-    
-    // Sets
-    public void CadastrarNome() {
-        this.nome = input.nextLine();
-        listaNomes.add(this.nome);
-    }
-    
-    public void CadastrarDescricao() {
-        this.descricao = input.nextLine();
-        listaDescricoes.add(this.descricao);
-        
-    }
-    
-    public void CadastrarCategoria() {
-        this.categoria = input.next();
-        listaCategorias.add(this.categoria);
-        
+    //private int codigo;
+
+    public String getNome() {
+        return nome;
     }
 
-    public void CadastrarValor() {
-        this.valor = input.nextDouble();
-        listaValores.add(this.valor);
-        
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    
-    public void CadastrarQuantidades() {
-        this.quantidade = input.nextInt();
-        listaQuantidades.add(this.quantidade);
-        
+
+    public String getCategoria() {
+        return categoria;
     }
-    
-    // Gets
-    
-    public void getEstoque() {
-        System.out.println("Lista de produtos cadastrados: ");
-        for (int i = 0; i < listaNomes.size(); i++) {
-            System.out.println("Código: " + i + 
-                    " | Produto: " + listaNomes.get(i) +
-                    " | Quantidade: " + listaQuantidades.get(i));
-        }
-        
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
-   
-    
-    
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
 }
