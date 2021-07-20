@@ -15,7 +15,6 @@ public class Produto {
     public String CadastrarNome() {
         this.nome = input.nextLine();
         return this.nome;
-        
     }
     
     public String CadastrarDescricao() {
