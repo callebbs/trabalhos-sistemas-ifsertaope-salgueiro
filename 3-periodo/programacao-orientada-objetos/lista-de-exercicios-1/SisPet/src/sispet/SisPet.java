@@ -135,6 +135,12 @@ public class SisPet {
                 }
             // Realizar venda
         } else if (opcao == 6) {
+                System.out.println(" --- VENDA ---");
+                System.out.println("Digite o código do produto: ");
+                codProduto = input.nextInt();
+                System.out.println(listaProdutos.get(codProduto));
+                
+                System.out.print("Quantidade de produtos para adicionar ao carrinho: ");
             // Relatório do estoque
         } else if (opcao == 7) {
             
