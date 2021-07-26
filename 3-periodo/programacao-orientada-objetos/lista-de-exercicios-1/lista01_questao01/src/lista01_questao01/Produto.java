@@ -1,5 +1,9 @@
 package lista01_questao01;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Produto {
     
     // Declaração de variáveis
@@ -40,22 +44,13 @@ public class Produto {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
     
     
     @Override
     public String toString() {
-        return "Código " + codigo + " | " +
-                "Nome: " + nome + " | " +
-                "Valor: " + valor + " | " +
-                "Quantidade: " + quantidade + " | ";
+        return "Nome: " + this.nome + " | " + 
+                "Valor: " + this.valor + " | " + 
+                "Quantidade: " + this.quantidade;
     }
 }
 

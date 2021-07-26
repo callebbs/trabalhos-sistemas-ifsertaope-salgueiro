@@ -18,6 +18,7 @@ public static void Menu() {
     
     int opcao = 0;
     int altProduto;
+    int delProduto;
     
     do {
         System.out.println("## SISPET ##");
@@ -48,26 +49,31 @@ public static void Menu() {
             System.out.print("Digite a quantidade: ");
             produto.setQuantidade(Integer.parseInt(input.nextLine()));
             
-            System.out.print("Digite o código do produto: ");
-            produto.setCodigo(Integer.parseInt(input.nextLine()));
-            
             listaProdutos.add(produto);
+            
+        } else if (opcao == 2) {
+            System.out.println("Produtos cadastrados: ");
+            
+            for (int i = 0; i < listaProdutos.size(); i++ ) {
+                System.out.println(listaProdutos.get(i));
+            }
+            
+            System.out.println("Digite o código do produto que deseja alterar: ");
+            altProduto = input.nextInt();
+            
+            System.out.print("Digite o nome do produto: ");
+            listaProdutos.set(altProduto, "teste");
+            
+
         } else if (opcao == 3) {
             for (int i = 0; i < listaProdutos.size(); i++) {
                 System.out.println(listaProdutos.get(i));
             }
-            System.out.println("Digite o código do item que deseja editar: ");
-            altProduto = input.nextInt();
-            
-            for (int i = 0; i < listaProdutos.size(); i++) {
-                
-                    
-                }
-            }
-            
-            
-            
-        
+            System.out.println("Digite o código do item que deseja : ");
+            delProduto = input.nextInt();
+            listaProdutos.remove(delProduto);
+            System.out.println("Produto removido com sucesso.");
+
         } else if (opcao == 7) {
             if (listaProdutos.isEmpty()) {
                 System.out.print("Não existem produtos cadastrados.\nAperte enter para continuar.");
@@ -75,7 +81,8 @@ public static void Menu() {
             } else {
             System.out.println("Produtos em estoque: ");
             for (int i = 0; i < listaProdutos.size(); i++ ) {
-                System.out.println(listaProdutos.get(i));
+                System.out.println("Código: " + i + " | " 
+                        + listaProdutos.get(i));
             }
             }
         }
