@@ -136,17 +136,45 @@ public class SisPet {
             // Realizar venda
         } else if (opcao == 6) {
                 System.out.println(" --- VENDA ---");
-                System.out.println("Digite o código do produto: ");
-                codProduto = input.nextInt();
-                System.out.println(listaProdutos.get(codProduto));
                 
-                System.out.print("Quantidade de produtos para adicionar ao carrinho: ");
+                    if (listaProdutos.isEmpty() == true) {
+                    System.out.println("Não existe itens cadastrados.");
+                } else {
+                    System.out.println("Produtos no Estoque:");
+                    for (int i = 0; i < listaProdutos.size(); i++) {
+                        System.out.println("Código: " + i + " | " + listaProdutos.get(i).mostrarEstoque());
+                    }
+                    System.out.println("----------------------------");
+                    
+                    System.out.print("Digite o código do produto: ");
+                    codProduto = input.nextInt();
+                    System.out.println(listaProdutos.get(codProduto));
+
+                    System.out.print("Quantidade de produtos para adicionar ao carrinho: ");
+                    int qtdProd = input.nextInt();
+
+                    if (qtdProd <= listaProdutos.get(codProduto).getQuantidade()) {
+                        int delEstoque = listaProdutos.get(codProduto).getQuantidade() - qtdProd;
+                        listaProdutos.get(codProduto).setQuantidade(delEstoque);
+                        System.out.println("Produtos vendidos com sucesso.");
+                    } else {
+                        System.out.println("Quantidade informada é maior do que disponível no estoque.\n"
+                                + "Reduza a quantidade para continuar com a venda.");
+                    }
+                }
+
             // Relatório do estoque
         } else if (opcao == 7) {
-            
-        }
+            if (listaProdutos.isEmpty() == true) {
+                System.out.println("Não existe itens cadastrados.");
+            } else {
+                System.out.println("Produtos no Estoque:");
+                for (int i = 0; i < listaProdutos.size(); i++) {
+                    System.out.println(listaProdutos.get(i).mostrarEstoque());
+                }
+                System.out.println("----------------------------");
+            }
+            }
         } while (opcao != 8);
-  
     }
-   
-}
+ }

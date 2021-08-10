@@ -84,7 +84,10 @@ public class Produto {
         
     }
     
-    public void editarProduto() {
-        
+    public String mostrarEstoque() {
+        return "Produto: " + this.nome + " | " +
+                "Quantidade: " + this.quantidade + " | ";
     }
+    
+    
 }
