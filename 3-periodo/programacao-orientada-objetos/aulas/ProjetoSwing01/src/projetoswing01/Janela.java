@@ -1,10 +1,21 @@
 package projetoswing01;
 
+import java.awt.FlowLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Janela extends JFrame {
+    private JLabel meuLabel1, meuLabel2;
     
     public Janela() {
+        //construtor do JFrame
+        //transforma o texto do método no título da janela
+        super("Minha Janela Swing");
+        setLayout(new FlowLayout());
+        
+        meuLabel1 = new JLabel("Exemplo de Label");
+        add(meuLabel1);
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //fecha a janela através do X
         setSize(500, 300);
