@@ -26,6 +26,7 @@ public class Janela extends JFrame implements ActionListener {
         setResizable(false);
     }
     
+    @Override
     public void actionPerformed(ActionEvent e){
         JOptionPane.showMessageDialog(null, "Você me clicou");
     }
