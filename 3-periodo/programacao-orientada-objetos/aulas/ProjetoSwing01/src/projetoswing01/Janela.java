@@ -1,6 +1,7 @@
 package projetoswing01;
 
 import java.awt.FlowLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -8,6 +9,7 @@ import javax.swing.JTextField;
 public class Janela extends JFrame {
     private JLabel meuLabel1, meuLabel2;
     private JTextField meuField;
+    private JButton meuButton;
     
     public Janela() {
         //construtor do JFrame
@@ -20,6 +22,9 @@ public class Janela extends JFrame {
         
         meuField = new JTextField(20);
         add(meuField);
+        
+        meuButton = new JButton("OK");
+        add(meuButton);
         
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //fecha a janela através do X
