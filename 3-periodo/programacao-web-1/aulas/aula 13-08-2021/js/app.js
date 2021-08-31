@@ -65,7 +65,6 @@ console.log(
 )
 
 
-
 //Pegando elementos por classe
 console.log(
     document.getElementsByClassName("carro")[0].innerHTML,
@@ -109,7 +108,6 @@ console.log(
 // Recebendo novo conteúdo
 
 document.getElementById("p1").innerHTML = "Novo conteúdo"
-
 
 
 //Utilizando variáveis
