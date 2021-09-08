@@ -1,8 +1,8 @@
-package br.edu.ifsertaope.meiostransporte.dominio;
+package avaliacao02_questao03;
 
 import java.util.Scanner;
 
-public class MeiosDeTransporte {
+public class Avaliacao02_questao03 {
 
     public static void main(String[] args) {
         Bicicleta bike1 = new Bicicleta();

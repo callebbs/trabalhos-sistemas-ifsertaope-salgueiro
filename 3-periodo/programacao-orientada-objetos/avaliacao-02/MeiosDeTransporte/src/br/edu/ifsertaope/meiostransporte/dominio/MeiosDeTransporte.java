@@ -21,7 +21,6 @@ public class MeiosDeTransporte {
         double potenciaDoMotor;
         boolean partidaEletrica;
         
-        
         // Obtendo dados da Bicicleta
         
         System.out.println("Infomações da Bicileta: ");
