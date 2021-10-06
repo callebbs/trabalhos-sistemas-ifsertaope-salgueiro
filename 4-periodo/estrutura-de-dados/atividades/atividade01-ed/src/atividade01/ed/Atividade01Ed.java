@@ -12,7 +12,9 @@ public class Atividade01Ed {
         vetor.adiciona("Jéssica");
         vetor.adiciona("Matheus");
         
-        System.out.println(vetor.toString());
+        System.out.println("Tamanho do vetor é: " + vetor.tamanhoVetor());
+        
+        System.out.println("No vetor contém os seguintes elementos:\n" + vetor.toString());
     }
     
 }
