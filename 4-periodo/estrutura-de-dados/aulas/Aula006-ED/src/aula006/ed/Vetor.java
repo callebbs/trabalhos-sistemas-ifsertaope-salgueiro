@@ -1,4 +1,4 @@
-package aula005.ed;
+package aula006.ed;
 
 import java.util.Arrays;
 
@@ -51,7 +51,8 @@ public class Vetor {
         return this.elementos[posicao];
         }
 
-    // // Busca sequencial antigo
+    // Busca sequencial antigo
+    
     // public boolean verifica(String elemento) {
     //     for (int i = 0; i < this.tamanho; i++) {
     //         if (this.elementos[i].equalsIgnoreCase(elemento)) {
