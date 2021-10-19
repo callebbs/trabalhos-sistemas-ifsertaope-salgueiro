@@ -2,13 +2,14 @@ package aula006.ed;
 
 import java.util.Arrays;
 
-public class Vetor {
-    private String[] elementos;
+
+public class VetorObject {
+    private Object[] elementos;
     private int tamanho;
     
     // Criando uma lista vazia
-    public Vetor(int capacidade) {
-        this.elementos = new String[capacidade];
+    public VetorObject(int capacidade) {
+        this.elementos = new Object[capacidade];
         this.tamanho = 0;
     }
     
@@ -25,7 +26,7 @@ public class Vetor {
     */
     
     // Insere elementos - OTIZIMADO
-    public boolean adicionaUltimaPosicao(String elemento) {
+    public boolean adicionaUltimaPosicao(Object elemento) {
         
         if(tamanho < elementos.length) {
             this.elementos[this.tamanho] = elemento;
@@ -65,7 +66,7 @@ public class Vetor {
     // Busca sequencial    
     public int verifica(String elemento) {
         for (int i = 0; i < this.tamanho; i++) {
-            if (this.elementos[i].equalsIgnoreCase(elemento)) {
+            if (this.elementos[i].equals(elemento)) {
                 return i;
             }
         }
@@ -92,7 +93,7 @@ public class Vetor {
     
     public void aumentaCapacidade() {
         if(this.tamanho == this.elementos.length) {
-            String[] elementosNovos = new String[this.elementos.length * 2];
+            Object[] elementosNovos = new Object[this.elementos.length * 2];
             for (int i = 0; i < this.elementos.length; i++) {
                 elementosNovos[i] = this.elementos[i];
             }
@@ -109,5 +110,5 @@ public class Vetor {
        }
        tamanho--;
     }
-    
+
 }
