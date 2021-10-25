@@ -45,7 +45,7 @@ public class VetorObject {
     }
 
     // Mostrando elementos pelo índice especificado
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
         if (!((posicao >= 0) && (posicao < this.tamanho))) {
             throw new IllegalAccessError("Posição Inválida");
         } 
