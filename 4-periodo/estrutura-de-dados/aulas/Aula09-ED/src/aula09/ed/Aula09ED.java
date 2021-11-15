@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Aula09ED {
 
     public static void main(String[] args) {
-        int[] vetor = new int[4];
+        //int[] vetor = new int[4];
         
 //        Scanner ler = new Scanner(System.in);
 //        
@@ -31,8 +31,9 @@ public class Aula09ED {
 //         for(int v : vetor ) {
 //            System.out.print(v + " ");
 //        }
-         
-        // Testando a classe Animal
+      
+/*
+        // Testando a classe Animal;
 
         Animal[] animais = new Animal[4];
         
@@ -61,6 +62,42 @@ public class Aula09ED {
         for(Animal a : animais ) {
             System.out.print("(" + a.getNome() + " - " + a.getEspecie() + ")");
         }
+
+
+    int[] vetor = {6, 2, 4, 9, 1, 7, 3, 10, 5, 8};
+    Ordenacao ordena = new Ordenacao();
+    
+    System.out.println("Vetor desorganizado: ");
+    for (int v : vetor) {
+        System.out.print(v + ", ");
+    }
+    System.out.println("\n");
+    
+    ordena.selectionSort(vetor);
+    
+    System.out.println("Vetor organizado: ");
+    for (int v : vetor) {
+        System.out.print(v + ", ");
+    }
+    */
+    
+    int[] vetor = {6, 2, 4, 9, 1, 7, 3, 10, 5, 8};
+    Ordenacao ordena = new Ordenacao();
+    
+    System.out.println("Vetor desorganizado: ");
+    for (int v : vetor) {
+        System.out.print(v + ", ");
+    }
+    System.out.println("\n");
+    
+    ordena.insertionSort(vetor);
+    
+    System.out.println("Vetor organizado: ");
+    for (int v : vetor) {
+        System.out.print(v + ", ");
     }
     
+    
+    
+    }
 }

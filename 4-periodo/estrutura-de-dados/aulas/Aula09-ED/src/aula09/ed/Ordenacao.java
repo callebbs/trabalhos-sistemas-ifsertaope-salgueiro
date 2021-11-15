@@ -40,4 +40,36 @@ public class Ordenacao {
         }
     }
     
+    public void selectionSort(int[] vetor) {
+        int menor , aux;
+        
+        for (int i = 0; i < vetor.length-1; i++) {
+            menor = i;
+            for (int j = i+1; j < vetor.length; j++) {
+                if (vetor[menor] > vetor[j]) {
+                    menor = j;
+                }
+            }
+            if (menor != i) {
+                aux = vetor[i];
+                vetor[i] = vetor[menor];
+                vetor[menor] = aux;
+            }
+        }
+    }
+    
+    public void insertionSort(int[] vetor) {
+        for (int i = 1; i < vetor.length; i++) {
+            int aux = vetor[i];
+            int j = i-1;
+            
+            while((j > -1) && (vetor[j] > aux)) {
+                vetor[j+1] = vetor[j];
+                j--;
+            }
+            vetor[j+1] = aux;
+            
+        }
+    }
+    
 }
