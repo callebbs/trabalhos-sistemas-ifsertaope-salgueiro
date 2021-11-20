@@ -23,12 +23,5 @@ public class No {
 
     public void setElemento(Object elemento) {
         this.elemento = elemento;
-    }
-
-    
-
-
-    
-    
-    
+    } 
 }
