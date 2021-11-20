@@ -133,8 +133,5 @@ public class Aula09ED {
 
         System.out.println(busca.buscaBinaria(vetor, 0, vetor.length - 1, 10));
 
-    
-    
-    
     }
 }
