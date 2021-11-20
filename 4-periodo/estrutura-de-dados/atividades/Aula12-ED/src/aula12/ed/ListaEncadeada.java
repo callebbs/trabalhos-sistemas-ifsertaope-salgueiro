@@ -17,7 +17,7 @@ public class ListaEncadeada {
 
     @Override
     public String toString() {
-        return "Lista [inicio=" + inicio.getElemento() + ", fim=" + fim.getElemento() + ", totalDeElementos=" + totalDeElementos + "]";
+        return "Lista [inicio= " + inicio.getElemento() + ", fim = " + fim.getElemento() + ", totalDeElementos = " + totalDeElementos + "]";
     }
     
     

@@ -6,7 +6,11 @@ public class Aula12ED {
        ListaEncadeada lista = new ListaEncadeada();
        
        lista.adicionaInicio("Star Wars é top");
-        System.out.println(lista.toString());
+       System.out.println(lista.toString());
+       lista.adicionaInicio("Matrix é top");
+       System.out.println(lista.toString());
+       lista.adicionaInicio("Spice must flow!");
+       System.out.println(lista.toString());
     }
     
 }
