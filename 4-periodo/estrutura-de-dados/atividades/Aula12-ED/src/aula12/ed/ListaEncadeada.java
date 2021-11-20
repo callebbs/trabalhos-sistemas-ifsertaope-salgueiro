@@ -14,5 +14,12 @@ public class ListaEncadeada {
         }
         this.totalDeElementos++;
     }
+
+    @Override
+    public String toString() {
+        return "Lista [inicio=" + inicio.getElemento() + ", fim=" + fim.getElemento() + ", totalDeElementos=" + totalDeElementos + "]";
+    }
+    
+    
     
 }
