@@ -72,8 +72,6 @@ public class Ordenacao {
         }
     }
     
-    
-    
     public void quickSort(int[] vetor, int inicio, int fim) {
         if (inicio < fim) {
             int p = partition(vetor, inicio, fim);
