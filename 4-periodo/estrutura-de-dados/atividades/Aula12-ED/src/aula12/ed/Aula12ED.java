@@ -27,6 +27,15 @@ public class Aula12ED {
         
         lista.adiciona(2, 100);
         System.out.println(lista.toString());
+        
+        lista.removeDoComeco();
+        System.out.println(lista.toString());
+        
+        lista.removeDoFinal();
+        System.out.println(lista.toString());
+        
+        lista.remove(1);
+        System.out.println(lista.toString());
     }
     
 }

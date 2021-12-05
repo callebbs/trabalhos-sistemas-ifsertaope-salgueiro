@@ -1,8 +1,9 @@
 package aula12.ed;
 
 public class No {
-    private No proximo;
     private Object elemento;
+    private No proximo;
+    private No anterior;    
     
     public No(Object elemento, No proximo) {
         this.proximo = proximo;
@@ -27,5 +28,13 @@ public class No {
 
     public void setElemento(Object elemento) {
         this.elemento = elemento;
-    } 
+    }
+
+    public No getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(No anterior) {
+        this.anterior = anterior;
+    }
 }
