@@ -14,12 +14,33 @@ public class ListaEncadeada {
         }
         this.totalDeElementos++;
     }
-
-    @Override
-    public String toString() {
-        return "Lista [inicio= " + inicio.getElemento() + ", fim = " + fim.getElemento() + ", totalDeElementos = " + totalDeElementos + "]";
-    }
     
+    public void adicionaNoFinal(Object elemento) {
+        if(this.totalDeElementos == 0) {
+            this.adicionaInicio(elemento);
+        } else {
+            No novo = new No(elemento);
+            this.fim.setProximo(novo);
+            this.fim = novo;
+            this.totalDeElementos++;
+        }
+    }
+
+    public String toString() {
+        if(this.totalDeElementos == 0) {
+            return "[]";
+        }
+        StringBuilder builder = new StringBuilder("[");
+        No atual = this.inicio;
+        for(int i = 0; i < this.totalDeElementos-1; i++) {
+            builder.append(atual.getElemento());
+            builder.append(", ");
+            atual = atual.getProximo();
+        }
+        builder.append(atual.getElemento());
+        builder.append("]");
+        return builder.toString();
+    }
     
     
 }

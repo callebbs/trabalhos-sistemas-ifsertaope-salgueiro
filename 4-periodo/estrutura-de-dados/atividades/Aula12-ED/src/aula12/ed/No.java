@@ -9,6 +9,10 @@ public class No {
         this.elemento = elemento;
     }
     
+    public No(Object elemento) {
+        this.elemento = elemento;
+    }
+    
     public No getProximo() {
     return proximo;
     }
