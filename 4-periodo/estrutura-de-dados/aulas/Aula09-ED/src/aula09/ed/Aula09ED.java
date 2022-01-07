@@ -79,7 +79,9 @@ public class Aula09ED {
     for (int v : vetor) {
         System.out.print(v + ", ");
     }
-    */
+    
+    
+    // Testando o Insertion Sort
     
     int[] vetor = {6, 2, 4, 9, 1, 7, 3, 10, 5, 8};
     Ordenacao ordena = new Ordenacao();
@@ -96,8 +98,40 @@ public class Aula09ED {
     for (int v : vetor) {
         System.out.print(v + ", ");
     }
-    
-    
-    
+          
+        // Testando o Quick Sort
+        
+        
+        int[] vetor = {6, 2, 4, 9, 1, 7, 3, 10, 5, 8};
+        Ordenacao ordena = new Ordenacao();
+
+        System.out.println("Vetor desorganizado: ");
+        for (int v : vetor) {
+            System.out.print(v + ", ");
+        }
+        System.out.println("\n");
+
+        ordena.quickSort(vetor, 0, vetor.length - 1);
+
+        System.out.println("Vetor organizado com Quick Sort: ");
+        for (int v : vetor) {
+            System.out.print(v + ", ");
+        }
+
+    */
+        
+        //Testando o método de Busca Binária
+        
+        int[] vetor = {6, 2, 4, 9, 1, 7, 3, 10, 5, 8};
+        Busca busca = new Busca();
+
+        System.out.println("Vetor desorganizado: ");
+        for (int v : vetor) {
+            System.out.print(v + ", ");
+        }
+        System.out.println("\n");
+
+        System.out.println(busca.buscaBinaria(vetor, 0, vetor.length - 1, 10));
+
     }
 }
